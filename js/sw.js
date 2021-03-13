@@ -1,26 +1,25 @@
-
 /* Para asignar un nombre y version de cache */
 
 const CACHE_NAME = 'v1_cache_portafolio_Jose_Viveros',
 
-urlsToCache = [
+    urlsToCache = [
 
-    './',
-    'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap',
-    '../css/styles.css',
-    './main.js'
-    
+        './',
+        'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap',
+        '../css/styles.css',
+        './main.js'
 
-]
+
+    ]
 
 
 /* 
  TODO Durante la fase de instalacion, generalmente se almacena en cache los activos estaticos
 */
 
-self.addEventListener('install',e =>{
+self.addEventListener('install', e => {
 
-    
+
     e.waitUntil(
 
         caches.open(CACHE_NAME)
@@ -28,9 +27,9 @@ self.addEventListener('install',e =>{
         .then(cache => {
 
             return cache.addAll(urlsToCache)
-            
-            .then(()=>self.skipWaiting())
-            
+
+                .then(() => self.skipWaiting())
+
             console.log("Install");
         })
 
@@ -49,10 +48,10 @@ self.addEventListener('install',e =>{
 */
 
 
-self.addEventListener('activate',e =>{
+self.addEventListener('activate', e => {
 
 
-    const cacheWhiteList = [ CACHE_NAME ]
+    const cacheWhiteList = [CACHE_NAME]
 
     e.waitUntil(
 
@@ -60,11 +59,11 @@ self.addEventListener('activate',e =>{
 
         .then(cachesNames => {
 
-            cachesNames.map(cacheName=>{
+            cachesNames.map(cacheName => {
 
                 /* Eliminamos lo que ya no se necesita en cacha */
 
-                if(cacheWhiteList.indexOf(cacheName)===-1){
+                if (cacheWhiteList.indexOf(cacheName) === -1) {
 
                     return caches.delete(cacheName);
 
@@ -88,9 +87,9 @@ self.addEventListener('activate',e =>{
 
 */
 
-self.addEventListener('fetch',e => {
+self.addEventListener('fetch', e => {
 
-   
+
 
     /* Responde ya sea con el objeto en cache o continuar y buscar la url real*/
 
@@ -100,19 +99,19 @@ self.addEventListener('fetch',e => {
 
         caches.match(e.request)
 
-        .then(res =>{
+        .then(res => {
 
-            if(res){
+            if (res) {
 
                 /* Recuperando de la cache */
-
                 return res;
 
+                console.log("Todo salio bien")
 
             }
 
             /* Recupera la peticion de la URL */
-            
+
             return fetch(e.request)
 
         })
