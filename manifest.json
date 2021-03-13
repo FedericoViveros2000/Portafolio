@@ -6,7 +6,7 @@
     "theme_color":"#00B8FF",
     "orientation":"portrait",
     "display":"standalone",
-    "start_url":"/",
+    "start_url":"./?utm_scope=web_app_manifest",
     "scope":"./",
     "lang":"es-PY",
     "icons": [
