@@ -112,6 +112,7 @@ function mostrarScrollDerecha(){
     }
 
 }
+
 function mostrarScrollIzquierda(){
 
     /* Para detectar el Scroll hacia abajo */
@@ -214,6 +215,7 @@ function mostrarScrollNormal(){
     }
 
 }
+
 function mostrarScrollNormal2(){
 
     /* Para detectar el Scroll hacia abajo */
@@ -258,3 +260,19 @@ window.addEventListener('scroll',mostrarScrollNormal);
 
 
 window.addEventListener('scroll',mostrarScrollNormal2);
+
+/* 
+    TODO Para la validacion de Services Worker para hacer una aplicacion progresiva
+ */
+
+    if ("serviceWorker" in navigator) {
+        
+        navigator.serviceWorker.register("./js/sw.js")
+        
+    /*     .then(reg => console.log("SW Funcionando!",reg))
+        
+        .catch(error => console.warn("SW Algo salio Mal",error)) */
+
+    
+
+    }
