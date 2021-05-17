@@ -12,7 +12,6 @@
     <!-- Para el FAVICON -->
     <link rel="shortcut icon" href="./img/imagen.svg" type="image/x-icon">
 
-    <link rel="manifest" href="./manifest.json">
 
     <!-- Para referenciar al archivo CSS -->
     <link rel="stylesheet" href="./css/styles.css">
@@ -26,6 +25,11 @@
     <link rel="apple-touch-icon" href="/img/imagen.svg">
 
 
+    <!-- Para los iconos -->
+
+    <link rel="stylesheet" href="./css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/552b72054f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -110,8 +114,8 @@
                     Informática y aparte de eso me estoy formando de manera autodidacta, ya que considero que la única
                     manera de avanzar en esta vida es aprendiendo dia tras dia nuevas cosas.</p>
 
-                <a href="https://wa.me/+595985917786?text=Buenos%20dias.%20Nos interesa%20tu%20trabajo" target="_blank"
-                    class="cta">Contactar</a>
+                <a href="./img/Curricullum_Jose_Viveros.pdf" download="CURRICULUM_VITAE_JOSE_VIVEROS"
+                    class="cta">Descargar CV</a>
 
 
 
@@ -121,10 +125,11 @@
             <figure class="about__picture">
 
 
-                <img src="./img/work1.jpg" alt="Mockup" class="about__img">
+                <img loading="lazy" src="./img/work1.jpg" alt="Mockup" class="about__img">
 
 
             </figure>
+
         </section>
 
         <section class="card">
@@ -144,7 +149,7 @@
 
                         <figure class="card__img">
 
-                            <img src="./img/bxl-css3.svg" alt="" class="card__picture">
+                            <img loading="lazy" src="./img/bxl-css3.svg" alt="" class="card__picture">
 
                         </figure>
 
@@ -159,7 +164,7 @@
 
                         <figure class="card__img">
 
-                            <img src="./img/bxl-microsoft.svg" alt="" class="card__picture">
+                            <img loading="lazy" src="./img/bxl-microsoft.svg" alt="" class="card__picture">
 
                         </figure>
 
@@ -175,7 +180,7 @@
 
                         <figure class="card__img">
 
-                            <img src="./img/bxl-javascript.svg" alt="" class="card__picture">
+                            <img loading="lazy" src="./img/bxl-javascript.svg" alt="" class="card__picture">
 
                         </figure>
 
@@ -191,7 +196,7 @@
 
                         <figure class="card__img">
 
-                            <img src="./img/bxl-html5.svg" alt="" class="card__picture">
+                            <img loading="lazy" src="./img/bxl-html5.svg" alt="" class="card__picture">
 
                         </figure>
 
@@ -212,7 +217,7 @@
 
             <figure class="course__picture">
 
-                <img src="./img/work2.jpg" alt="" class="course__img">
+                <img loading="lazy" src="./img/work2.jpg" alt="" class="course__img">
 
             </figure>
 
@@ -239,7 +244,7 @@
 
             <figure class="course__picture course__picture--right">
 
-                <img src="./img/work1.jpg" alt="" class="course__img">
+                <img loading="lazy" src="./img/work1.jpg" alt="" class="course__img">
 
             </figure>
 
@@ -258,9 +263,57 @@
 
         </section>
 
+       <!-- PARA EL SLIDER DE LAS CERTIFICACIONES -->
+       <h4 class="container__slider--title">Certificados</h4>
 
+        <section class="container__slider--certificaciones animado--normal">
+
+
+            <!-- IMAGENES DEL SLIDER -->
+
+            <div class="slider__certificaciones" id="slider">
+
+                <div class="slider__certificaciones--section">
+
+                    <img loading="lazy" src="./img/ingles.PNG" alt="Certificado de Tecnico en Informatica" class="slider__img">
+
+                </div>
+
+                <div class="slider__certificaciones--section">
+
+                    <img loading="lazy" src="./img/ingles.PNG" alt="Certificado de Ingles Avanzado" class="slider__img">
+
+                </div>
+
+              
+                <div class="slider__certificaciones--section">
+
+                    <img loading="lazy" src="./img/ingles.PNG" alt="Certificado de Ingles Intermedio" class="slider__img">
+
+                </div>
+
+                
+                <div class="slider__certificaciones--section">
+
+                    <img loading="lazy" src="./img/ingles.PNG" alt="Certificado de Ingles Intermedio" class="slider__img">
+
+                </div>
+
+                
+            </div>
+            
+          
+
+            <!-- BOTONES PARA EL SLIDER -->
+
+            <div class="slider__btn slider__btn--right" id="btn--right"> <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" class="slider__btn--right"><path d="M10.707 17.707L16.414 12 10.707 6.293 9.293 7.707 13.586 12 9.293 16.293z"/></svg></div>
+
+            <div class="slider__btn slider__btn--left" id="btn--left"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" class="slider__btn--left"><path d="M13.293 6.293L7.586 12 13.293 17.707 14.707 16.293 10.414 12 14.707 7.707z"/></svg></div>
+
+        </section>
 
     </main>
+
 
     <footer class="footer">
 
@@ -282,26 +335,26 @@
                         <a href="https://wa.me/+595985917786?text=Buenos%20dias.%20Nos interesa%20tu%20trabajo"
                             target="_blank" class="footer__link animado--normal2">
 
-                            <img src="./img/bxl-whatsapp.svg" alt="Icono de Whatsapp" class="footer__icon">
+                            <img loading="lazy" src="./img/bxl-whatsapp.svg" alt="Icono de Whatsapp" class="footer__icon">
 
                         </a>
 
                         <a href="mailto:josevivers2000@gmail.com" class="footer__link animado--normal2">
 
-                            <img src="./img/bx-mail-send.svg" alt="" class="footer__icon">
+                            <img loading="lazy" src="./img/bx-mail-send.svg" alt="" class="footer__icon">
 
                         </a>
 
                         <a href="https://www.linkedin.com/in/joseviveros2000" target="_blank"
                             class="footer__link animado--normal2">
 
-                            <img src="./img/bxl-linkedin.svg" alt="" class="footer__icon">
+                            <img loading="lazy" src="./img/bxl-linkedin.svg" alt="" class="footer__icon">
 
                         </a>
 
                         <a href="tel:+595985917786" class="footer__link animado--normal2">
 
-                            <img src="./img/bx-phone-call.svg" alt="" class="footer__icon">
+                            <img loading="lazy" src="./img/bx-phone-call.svg" alt="" class="footer__icon">
 
                         </a>
 
@@ -317,7 +370,7 @@
 
                 <footer class="footer__picture animado--normal2">
 
-                    <img src="./img/message.svg" alt="Mensajeria" class="footer__img animado--normal2">
+                    <img loading="lazy" src="./img/message.svg" alt="Mensajeria" class="footer__img animado--normal2">
 
                 </footer>
 
@@ -334,6 +387,7 @@
 
 
     <script src="./js/main.js"></script>
+    <script src="./js/all.min.js"></script>
 </body>
 
 </html>
