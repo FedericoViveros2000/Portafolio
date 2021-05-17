@@ -31,14 +31,14 @@
 
 /* Boton */
 
-.modo__oscuro{
+.modo__oscuro {
     width: 100%;
     display: flex;
-    justify-content: flex-end;    
+    justify-content: flex-end;
 
 }
 
-.switch{
+.switch {
     position: relative;
     top: 30px;
     right: 30px;
@@ -53,7 +53,7 @@
 
 }
 
-.switch > span{
+.switch>span {
     width: 30px;
     height: 30px;
     line-height: 42px;
@@ -65,7 +65,7 @@
 
 /* Para tapar el sol en modo oscuro */
 
-.switch::after{
+.switch::after {
     content: "";
     display: block;
     width: 30px;
@@ -77,16 +77,16 @@
     right: unset;
     border-radius: 100px;
     transition: .5s ease all;
-    box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
 }
 
-.switch.active{
+.switch.active {
     background-color: orange;
-    color:#000;
+    color: #000;
     transition: .5s ease all;
 }
 
-.switch.active::after{
+.switch.active::after {
     right: 0;
     left: unset;
 
@@ -100,7 +100,7 @@ body {
     font-family: 'Inter', sans-serif;
     transition: 1s ease all;
 
-   
+
 }
 
 
@@ -109,23 +109,24 @@ body {
     width: var(--width-container);
     max-width: var(--max-width-container);
     padding: var(--padding-container);
-/*     overflow: hidden;
- */    margin: auto;
+    /*     overflow: hidden;
+ */
+    margin: auto;
 }
 
-.hero{
+.hero {
     height: 100vh;
     position: relative;
-    --padding-container:0;
-    background-color:#0996fb9f;
+    --padding-container: 0;
+    background-color: #0996fb9f;
     transition: 1s ease background-color;
 }
 
-body.dark .hero{
+body.dark .hero {
     background-color: #3F4756;
 }
 
-.hero::after{
+.hero::after {
     content: "";
     display: block;
     position: absolute;
@@ -135,20 +136,20 @@ body.dark .hero{
     left: 0;
     z-index: 1;
     background-color: #fff;
-    clip-path: polygon(0 100%, 100% 100% ,100% 0);
-    
+    clip-path: polygon(0 100%, 100% 100%, 100% 0);
+
     transition: background-color 1s;
-    
+
 }
 
-body.dark .hero::after{
+body.dark .hero::after {
     content: "";
     background-color: #3E6191;
 
 
 }
 
-.hero__container{
+.hero__container {
 
     display: grid;
     height: 100%;
@@ -159,20 +160,20 @@ body.dark .hero::after{
 
 }
 
-.hero__title{
+.hero__title {
     font-size: 4rem;
     transition: color 1s;
 
 }
 
-body.dark .hero__title{
+body.dark .hero__title {
 
     color: var(--color-text-dark);
 }
 
-.hero__cta{
+.hero__cta {
     display: inline-block;
-    background-color:var(--color-btn);
+    background-color: var(--color-btn);
     color: var(--text-btn);
     padding: var(--padding-btn);
     text-align: center;
@@ -183,7 +184,7 @@ body.dark .hero__title{
 }
 
 
-.hero__copy{
+.hero__copy {
     font-size: 1.2rem;
     margin: 25px 15px;
     transition: color 1s;
@@ -191,27 +192,27 @@ body.dark .hero__title{
 
 }
 
-body.dark .hero__copy{
-    color:var(--color-text-dark);
+body.dark .hero__copy {
+    color: var(--color-text-dark);
 }
 
-.hero__img{
+.hero__img {
     width: 95%;
 }
 
 
-.main{
+.main {
     background-color: #fff;
     transition: background-color 1s;
-    
+
 }
 
-body.dark .main{
+body.dark .main {
     background-color: #3E6191;
 }
 
 
-.title{
+.title {
     font-size: 2.5rem;
     text-align: var(--align-title);
     color: var(--color-title);
@@ -220,7 +221,7 @@ body.dark .main{
 
 }
 
-.title--border::after{
+.title--border::after {
     content: "";
     display: block;
     width: 100px;
@@ -229,11 +230,11 @@ body.dark .main{
     background-color: var(--color-btn);
 }
 
-body.dark .title{
+body.dark .title {
     color: var(--color-title-dark);
 }
 
-.cta{
+.cta {
     display: inline-block;
     background-color: var(--color-btn);
     padding: var(--padding-btn);
@@ -247,50 +248,50 @@ body.dark .title{
 
 /* Parte de quien soy */
 
-.instructor{
+.instructor {
     text-align: center;
     border-bottom: 2px solid #ccc;
-    --padding-container:20px 0 60px;
+    --padding-container: 20px 0 60px;
 }
 
-.instructor__container{
+.instructor__container {
     width: 70%;
     margin: auto;
 }
 
 
 
-.instructor__name{
+.instructor__name {
     margin: 20px 0;
     font-size: 28px;
     transition: color 1s;
-    
+
 }
 
-body.dark .instructor__name{
-  color:var(--color-title-dark);
-    
+body.dark .instructor__name {
+    color: var(--color-title-dark);
+
 }
 
 
-.instructor__tag{
+.instructor__tag {
     font-weight: 700;
     color: var(--color-primary);
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-.instructor__paragraph{
+.instructor__paragraph {
     text-align: left;
     line-height: 1.5;
     font-style: italic;
-    color:#615A5A;
+    color: #615A5A;
     font-size: 20px;
     transition: color 1s;
 
 }
 
-.paragraph{
+.paragraph {
     font-size: 18px;
     text-align: justify;
     text-indent: 50px;
@@ -299,11 +300,11 @@ body.dark .instructor__name{
 
 
 
-body.dark .instructor__paragraph{
+body.dark .instructor__paragraph {
     color: var(--color-text-dark);
 }
 
-.instructor__img{
+.instructor__img {
     width: 250px;
     height: 250px;
     border-radius: 50%;
@@ -313,17 +314,17 @@ body.dark .instructor__paragraph{
 
 /* About */
 
-.about{
+.about {
     display: grid;
     grid-template-columns: 5fr 4fr;
     place-items: center;
 }
 
-.about__course{
+.about__course {
     width: 90%;
 }
 
-.about__paragraph{
+.about__paragraph {
     margin: 20px 0;
     line-height: 1.5;
     font-weight: 300;
@@ -335,60 +336,60 @@ body.dark .instructor__paragraph{
 }
 
 
-body.dark .about__paragraph{
-   color: var(--color-text-dark);
+body.dark .about__paragraph {
+    color: var(--color-text-dark);
 }
 
-.about__picture{
+.about__picture {
     text-align: center;
 }
 
-.about__img{
+.about__img {
     width: 95%;
     border-radius: 10px;
 }
 
 /* Card */
 
-.card{
+.card {
     background-color: #f2f2f2;
     transition: background-color 1s;
 
 }
 
-body.dark .card{
+body.dark .card {
     background-color: #A3ABBD;
 }
 
-.card__copy{
+.card__copy {
     margin-top: 20px;
     text-align: center;
     font-size: 18px;
 }
 
-.card__container{
+.card__container {
     width: 99%;
     margin: 0 auto;
     margin-top: 60px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     gap: 20px;
-    grid-template-areas: 
-        ".      card1   .    " 
-        "card2  card1   card3" 
-        "card2  card4   card3"  
+    grid-template-areas:
+        ".      card1   .    "
+        "card2  card1   card3"
+        "card2  card4   card3"
         ".      card4   .    "
-        
+
     ;
 
 }
 
-.card__item{
+.card__item {
     padding: 20px;
     background: #fff;
     border-top: 5px solid #667EEA;
-    box-shadow: 0 0 3px rgba(0,0,0,.5);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .5);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -396,13 +397,13 @@ body.dark .card{
 
 }
 
-body.dark .card__item{
+body.dark .card__item {
     border-top: 5px solid --color-btn-dark;
 
     background-color: #E0F1EF;
 }
 
-.card__img{
+.card__img {
     background-color: var(--color-btn);
     margin-top: 20px;
     width: 80px;
@@ -413,37 +414,40 @@ body.dark .card__item{
     align-items: center;
 }
 
-.card__title{
+.card__title {
     margin: 20px 0;
     font-size: 1.5rem;
 }
 
-.card__paragraph{
+.card__paragraph {
     font-weight: 300;
     margin-bottom: 20px;
 }
 
-.card__picture{
+.card__picture {
     width: 50px;
-    
+
 }
 
-.card__item:nth-last-of-type(1){
+.card__item:nth-last-of-type(1) {
 
     grid-area: card1;
 
 }
-.card__item:nth-last-of-type(2){
+
+.card__item:nth-last-of-type(2) {
 
     grid-area: card2;
 
 }
-.card__item:nth-last-of-type(3){
+
+.card__item:nth-last-of-type(3) {
 
     grid-area: card3;
 
 }
-.card__item:nth-last-of-type(4){
+
+.card__item:nth-last-of-type(4) {
 
     grid-area: card4;
 
@@ -451,22 +455,23 @@ body.dark .card__item{
 
 /* Curso */
 
-.course{
-    --color-title:#fff;
-    --color--btn:#fff;
-    --text--btn:#444cf7;
-    color:var(--color-title);
+.course {
+    --color-title: #fff;
+    --color--btn: #fff;
+    --text--btn: #444cf7;
+    color: var(--color-title);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-/*     align-items: center;
- */}
+    /*     align-items: center;
+ */
+}
 
-.course__about{
+.course__about {
     align-self: center;
     width: 97%;
     margin: 0 auto;
     padding: 30px;
-    box-shadow: 0 0 6px rgba(0,0,0,.5);
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
     background-color: var(--color-btn);
     grid-column: 1/4;
     grid-row: 2/-2;
@@ -477,50 +482,50 @@ body.dark .card__item{
 
 }
 
-body.dark .course__about{
+body.dark .course__about {
     background-color: #3F4756;
 }
 
-.course__picture{
+.course__picture {
     margin: 0;
     grid-column: 3/-1;
     grid-row: 1/-1;
 }
 
-.course__img{
+.course__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 5px;
 }
 
-.course__picture--right{
+.course__picture--right {
     grid-column: 1/4;
 }
 
-.course__about--left{
+.course__about--left {
     grid-column: 3/-1;
 }
 
 
 /* Footer */
 
-.footer{
+.footer {
     position: relative;
     background-color: #00b7ffe8;
-    --padding-container:160px 0 50px;
+    --padding-container: 160px 0 50px;
     transition: background-color 1s;
 
 
 }
 
-body.dark .footer{
+body.dark .footer {
     background-color: #3F4756;
 
 
 }
 
-.footer::before{
+.footer::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -528,27 +533,27 @@ body.dark .footer{
     background-color: #fff;
     top: 0;
     left: 0;
-    clip-path: polygon(0 0,100% 0, 50% 100%);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
     transition: background-color 1s;
 }
 
-body.dark .footer::before{
+body.dark .footer::before {
     background-color: #3E6191;
     border: none;
 }
 
-.footer__contact{
+.footer__contact {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     place-items: center;
     margin-bottom: 30px;
-    
+
 
 }
 
 
-.footer__copy{
+.footer__copy {
     margin: 20px 0;
     font-weight: 300;
     transition: color 1s;
@@ -556,22 +561,22 @@ body.dark .footer::before{
 
 }
 
-body.dark .footer__copy{
+body.dark .footer__copy {
     color: var(--color-text-dark);
 }
 
 
-.footer__picture{
+.footer__picture {
     margin: 0;
 }
 
-.footer__social{
+.footer__social {
     display: flex;
     padding-top: 30px;
     flex-wrap: wrap;
 }
 
-.footer__link{
+.footer__link {
     width: 60px;
     height: 60px;
     border: 1px solid #000;
@@ -588,11 +593,11 @@ body.dark .footer__copy{
 
 
 
-body.dark .footer__link{
-    background-color:var(--color-text-dark);
+body.dark .footer__link {
+    background-color: var(--color-text-dark);
 }
 
-.footer__icon{
+.footer__icon {
     width: 25px;
 
 }
@@ -602,11 +607,11 @@ body.dark .footer__link{
 
 
 
-.footer__img{
+.footer__img {
     width: 100%;
 }
 
-.footer__copyright{
+.footer__copyright {
     padding-top: 30px;
     border-top: 2px solid #615A5A;
     text-align: center;
@@ -615,204 +620,300 @@ body.dark .footer__link{
 
 }
 
-body.dark .footer__copyright{
-    color:var(--color-text-dark);
+body.dark .footer__copyright {
+    color: var(--color-text-dark);
 }
 
-.footer__copyright::after{
+.footer__copyright::after {
     content: ": josevivers2000@gmail.com";
 }
 
 /* Responsive Desing */
 
-@media screen and (max-width:768px){
+@media screen and (max-width:768px) {
 
-    :root{
+    :root {
         --height-shape: 14em;
 
     }
 
-    .hero{
+    .hero {
         height: 750px;
     }
-    
 
 
 
 
-.hero__texts{
-    z-index: 30;
-}
+
+    .hero__texts {
+        z-index: 30;
+    }
 
 
 
-    .hero__container{
-        --padding-container:60px 0;
+    .hero__container {
+        --padding-container: 60px 0;
         grid-template-columns: 1fr;
         grid-template-rows: 2fr 1fr;
         z-index: -1;
     }
 
-    .hero__img{
+    .hero__img {
         order: -1;
         height: 95%;
     }
 
-    .hero__title{
+    .hero__title {
         font-size: 3.8rem;
     }
 
 
     /* About */
 
-    .about{
+    .about {
         grid-template-columns: 1fr;
         grid-template-rows: max-content 1fr;
         gap: 80px;
     }
 
-    .about__course{
+    .about__course {
         width: 100%;
     }
 
 
-    .about__picture{
+    .about__picture {
         order: -1;
     }
 
-    .about__img{
+    .about__img {
         width: 100%;
     }
 
 
     /* Card */
-    .card__container{
+    .card__container {
 
-        grid-template-columns: repeat (2,1fr );
-        grid-template-rows: repeat (5,1fr );
+        grid-template-columns: repeat (2, 1fr);
+        grid-template-rows: repeat (5, 1fr);
         gap: 15px;
-        grid-template-areas: 
-        
-        "card1      ."
-        "card1  card2"
-        "card3  card2"
-        "card3  card4"
-        ".      card4";
+        grid-template-areas:
+
+            "card1      ."
+            "card1  card2"
+            "card3  card2"
+            "card3  card4"
+            ".      card4";
 
 
 
     }
 
-/* Course */
 
-    .course{
+    /* Course */
 
-        grid-template-columns: repeat (6,1fr);
+    .course {
+
+        grid-template-columns: repeat (6, 1fr);
 
 
     }
 
-    .course .cta{
+    .course .cta {
         background-color: #fff;
         color: #000;
     }
 
-    .course__about{
+    .course__about {
         grid-column: 1/5;
-        
+
     }
 
-    .course__about--left{
+    .course__about--left {
         grid-column: 2/-1;
     }
 
-    .course__picture{
+    .course__picture {
         grid-column: 2/-1;
     }
 
-    .course__picture--right{
+    .course__picture--right {
         grid-column: 1/5;
     }
 
-    .footer__contact{
+    .footer__contact {
         grid-template-columns: 1fr;
     }
 
-    .footer__texts{
+    .footer__texts {
         order: 1;
-        --align-title:center;
+        --align-title: center;
     }
 
-    .footer__social{
+    .footer__social {
         justify-content: space-evenly;
     }
 
 }
 
+/* 
+        TODO Estilos del Slider de Certificaciones.
+    */
+
+.container__slider--certificaciones {
+    width: 70%;
+    height: 90vh;
+    max-width: 100%;
+    margin: auto;
+     overflow: hidden;
+    position: relative;
+    border-radius: 3px;
+    box-shadow: 1px 3px 10px rgba(65, 64, 64, 0.411);
+
+}
+
+.container__slider--title{
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-title);
+    margin-bottom: 50px;
+    transition: color 1s linear;
+}
+
+body.dark .container__slider--title{
+    
+    color: var(--color-title-dark);
+
+}
+
+.slider__certificaciones {
+
+    display: flex;
+    width: 400%;
+    height: 100%;
+    margin-left: -100%;
+}
+
+.slider__certificaciones--section {
+    width: 100%;
+    height: 100%;
+}
+
+.slider__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    text-align:center;
+}
+
+.slider__btn {
+    position: absolute;
+  
+    background-color: rgba(46, 46, 46, 0.11);
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color .5s linear;
+
+}
+
+.slider__btn:hover {
+
+    background-color: rgba(0, 0, 0, 0.377);
+
+}
+
+.slider__btn--left {
+    left: 0;
+}
+
+.slider__btn--right {
+    right: 0;
+}
+
+
+
+@media screen and (max-width:1200px){
+    .container__slider--certificaciones{
+        width: 90%;
+        height: 45vh;
+    }
+}
+
 
 /* Para moviles mas pequenhos */
 
-@media screen and (max-width:500px){
+@media screen and (max-width:500px) {
 
-    :root{
-        --padding-btn:20px 0;
+    :root {
+        --padding-btn: 20px 0;
     }
 
- 
+    .container__slider--certificaciones{
+        width: 90%;
+        height: 35vh;
+    }
 
-    .hero__container{
-        --padding-container:45px 0;
+
+
+    .hero__container {
+        --padding-container: 45px 0;
         width: 100%;
     }
 
-    .hero__texts{
+    .hero__texts {
         text-align: center;
     }
 
-    .hero__title{
+    .hero__title {
         font-size: 3rem;
     }
 
-    .hero__cta{
+    .hero__cta {
         display: block;
         width: 90%;
         margin: 0 auto;
     }
 
-    .title{
+    .title {
         font-size: 2rem;
     }
 
-    .cta{
+    .cta {
         display: block;
 
     }
 
-    .instructor{
-        --padding-container:60px 0;
+    .instructor {
+        --padding-container: 60px 0;
     }
 
-    .instructor__container{
+    .instructor__container {
         width: 90%;
     }
 
-    .about{
+    .about {
 
         gap: 40px;
     }
 
-    .about__course{
+    .about__course {
         width: 100%;
     }
 
 
     /* Card */
 
-    .card__container{
+    .card__container {
         width: 97%;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat (4,1fr );
-        grid-template-areas: 
+        grid-template-rows: repeat (4, 1fr);
+        grid-template-areas:
             "card1"
             "card2"
             "card3"
@@ -822,23 +923,23 @@ body.dark .footer__copyright{
 
     /* Course */
 
-    .course{
+    .course {
         grid-template-columns: 1fr;
-        --padding-container:80px 0 30px;
+        --padding-container: 80px 0 30px;
     }
 
     .course--modifier {
-        --padding-container:0 0 80px;
+        --padding-container: 0 0 80px;
     }
 
-    .course__about{
+    .course__about {
         padding: 20px 20px;
         width: 95%;
         grid-column: 1/-1;
         grid-row: 1/-1;
     }
 
-    .course__picture{
+    .course__picture {
         display: none;
     }
 
@@ -854,89 +955,89 @@ body.dark .footer__copyright{
     TODO Aqui se modifica de hacia donde se quiere que venga el elemento
 */
 
-.animado--derecha1{
+.animado--derecha1 {
     animation: animado--derecha1 1.5s;
 }
 
-@keyframes animado--derecha1{
+@keyframes animado--derecha1 {
 
-    0%{
-        transform:translateX(-500px);
+    0% {
+        transform: translateX(-500px);
     }
 
-    100%{
-        transform:translateX(0);
+    100% {
+        transform: translateX(0);
     }
 
 }
 
-.animado--izquierda1{
+.animado--izquierda1 {
     animation: animado--izquierda1 1.5s;
 }
 
-@keyframes animado--izquierda1{
+@keyframes animado--izquierda1 {
 
-    0%{
-        transform:translateX(500px);
+    0% {
+        transform: translateX(500px);
     }
 
-    100%{
-        transform:translateX(0);
+    100% {
+        transform: translateX(0);
     }
 
 }
 
-.animado{
+.animado {
     opacity: 0;
-    transition: all 1s;    
+    transition: all 1s;
 }
 
-.animado--normal{
+.animado--normal {
     opacity: 0;
-    transition: all 1s;    
+    transition: all 1s;
 }
 
 /* 
     TODO Aqui se modifica de hacia donde se quiere que venga el elemento
 */
 
-.mostrar--izquierda{
+.mostrar--izquierda {
     animation: mostrar--izquierda 1s;
 }
 
-@keyframes mostrar--izquierda{
+@keyframes mostrar--izquierda {
 
-    0%{
-        transform:translateX(60px);
+    0% {
+        transform: translateX(60px);
     }
 
-    100%{
-        transform:translateX(0);
+    100% {
+        transform: translateX(0);
     }
 
 }
 
-.animado--derecha{
+.animado--derecha {
     opacity: 0;
-    transition: all 1.5s;    
+    transition: all 1.5s;
 }
 
 /* 
     TODO Aqui se modifica de hacia donde se quiere que venga el elemento
 */
 
-.mostrar--derecha{
+.mostrar--derecha {
     animation: mostrar--derecha 1.5s;
 }
 
-@keyframes mostrar--derecha{
+@keyframes mostrar--derecha {
 
-    0%{
-        transform:translateX(-500px);
+    0% {
+        transform: translateX(-500px);
     }
-    
-    100%{
-        transform:translateX(0px);
+
+    100% {
+        transform: translateX(0px);
     }
 
 }
@@ -947,101 +1048,98 @@ body.dark .footer__copyright{
     TODO Aqui se modifica de hacia donde se quiere que venga el elemento
 */
 
-.mostrar--derecha{
+.mostrar--derecha {
     animation: mostrar--derecha 1.5s;
 }
 
-@keyframes mostrar--derecha{
+@keyframes mostrar--derecha {
 
-    0%{
-        transform:translateX(-500px);
+    0% {
+        transform: translateX(-500px);
     }
-    
-    100%{
-        transform:translateX(0px);
+
+    100% {
+        transform: translateX(0px);
     }
 
 }
 
-.animado--normal2{
+.animado--normal2 {
     opacity: 0;
-    transition: all 1.5s;    
+    transition: all 1.5s;
 }
 
 /* 
     TODO Aqui se modifica de hacia donde se quiere que venga el elemento
 */
 
-.mostrar--normal2{
+.mostrar--normal2 {
     animation: mostrar--normal2 1.5s;
 }
 
-@keyframes mostrar--normal2{
+@keyframes mostrar--normal2 {
 
-    0%{
-        transform:translateY(0);
+    0% {
+        transform: translateY(0);
     }
-    
-    100%{
-        transform:translateY(0);
+
+    100% {
+        transform: translateY(0);
     }
 
 }
 
-.animado--abajo{
+.animado--abajo {
     opacity: 0;
-    transition: all 1.5s;    
+    transition: all 1.5s;
 }
-.animado--arriba{
+
+.animado--arriba {
     opacity: 0;
-    transition: all 1.5s;    
+    transition: all 1.5s;
 }
 
 /* 
     TODO Aqui se modifica de hacia donde se quiere que venga el elemento
 */
 
-.mostrar--abajo{
+.mostrar--abajo {
     animation: mostrar--abajo 1.5s;
 }
 
-@keyframes mostrar--abajo{
+@keyframes mostrar--abajo {
 
-    0%{
-        transform:translateY(500px);
+    0% {
+        transform: translateY(500px);
     }
-    
-    100%{
-        transform:translateY(0);
+
+    100% {
+        transform: translateY(0);
     }
 
 }
 
-.animado--izquierda{
+.animado--izquierda {
     opacity: 0;
-    transition: all 1.5s;    
+    transition: all 1.5s;
 }
 
 /* 
     TODO Aqui se modifica de hacia donde se quiere que venga el elemento
 */
 
-.mostrar--izquierda{
+.mostrar--izquierda {
     animation: mostrar--izquierda 1.5s;
 }
 
-@keyframes mostrar--izquierda{
+@keyframes mostrar--izquierda {
 
-    0%{
-        transform:translateX(500px);
+    0% {
+        transform: translateX(500px);
     }
-    
-    100%{
-        transform:translateX(0);
+
+    100% {
+        transform: translateX(0);
     }
 
 }
-
-
-
-
