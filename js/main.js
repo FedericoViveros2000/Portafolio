@@ -262,17 +262,103 @@ window.addEventListener('scroll',mostrarScrollNormal);
 window.addEventListener('scroll',mostrarScrollNormal2);
 
 /* 
-    TODO Para la validacion de Services Worker para hacer una aplicacion progresiva
- */
 
-    if ("serviceWorker" in navigator) {
+TODO Para el slider de certificaciones
+
+*/
+
+const $slider = document.getElementById('slider');
+
+let $sliderSection = document.querySelectorAll('.slider__certificaciones--section');
+
+let $sliderSectionLast = $sliderSection[$sliderSection.length - 1];
+
+const $btnLeft = document.getElementById('btn--left');
+
+const $btnRight = document.getElementById('btn--right')
+
+$slider.insertAdjacentElement('afterbegin', $sliderSectionLast);
+
+function Next() {
+
+    let $sliderSectionFirst = document.querySelectorAll('.slider__certificaciones--section')[0];
+
+    $slider.style.marginLeft = '-200%';
+    $slider.style.transition = 'all .7s linear';
+
+    setTimeout(function () {
+
+        $slider.style.transition = 'none';
+
+        $slider.insertAdjacentElement('beforeend', $sliderSectionFirst);
+
+        $slider.style.marginLeft = '-100%';
         
-        navigator.serviceWorker.register("./js/sw.js")
-        
-    /*     .then(reg => console.log("SW Funcionando!",reg))
-        
-        .catch(error => console.warn("SW Algo salio Mal",error)) */
+    },700);
 
     
+}
+
+
+function Prev() {
+
+    let $sliderSection = document.querySelectorAll('.slider__certificaciones--section');
+
+    let $sliderSectionLast = $sliderSection[$sliderSection.length - 1];
+
+    $slider.style.marginLeft = '0';
+    $slider.style.transition = 'all .7s linear';
+
+    setTimeout(function () {
+
+        $slider.style.transition = 'none';
+
+        $slider.insertAdjacentElement('afterbegin', $sliderSectionLast);
+
+        $slider.style.marginLeft = '-100%';
+        
+    },700);
+
+    
+}
+
+
+
+
+
+
+
+let automatico = setInterval(() => {
+    
+    Next();
+
+}, 5000);
+
+$btnRight.addEventListener('click', ()=>{
+
+    if ($btnRight) {
+
+        clearInterval(automatico);
+
+        Next();
+        
+    }
+
+})
+
+$btnLeft.onclick = function () {
+
+    if ($btnLeft) {
+
+        clearInterval(automatico);
+
+        Prev();
 
     }
+
+    
+}
+
+
+
+   
