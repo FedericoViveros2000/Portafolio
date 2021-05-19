@@ -761,7 +761,7 @@ body.dark .footer__copyright {
 
 .container__slider--certificaciones {
     width: 70%;
-    height: 88vh;
+    height: 90vh;
     max-width: 100%;
     margin: auto;
      overflow: hidden;
@@ -797,7 +797,6 @@ body.dark .container__slider--title{
     width: 100%;
     height: 100%;
     text-align: center;
-    background-color: #fff;
 }
 
 .slider__img {
@@ -806,9 +805,7 @@ body.dark .container__slider--title{
     object-fit: cover;
 }
 
-.slider__img--informatica{
-    width: 90%;
-}
+
 
 .slider__btn {
     position: absolute;
@@ -845,14 +842,21 @@ body.dark .container__slider--title{
 @media screen and (max-width:1300px){
     .container__slider--certificaciones{
         width: 90%;
-        height: 95vh;
+        height: 45%;
+    }
+
+    .slider__img{
+        height: 100%;
     }
 }
 
 @media screen and (max-width:768px){
     .container__slider--certificaciones{
         width: 90%;
-        height: 60vh;
+        height: 65%;
+    }
+    .slider__img{
+        height: 100%;
     }
 }
 
@@ -868,7 +872,12 @@ body.dark .container__slider--title{
 
     .container__slider--certificaciones{
         width: 90%;
-        height: 40vh;
+        height: 45%;
+    }
+
+    .slider__img{
+        height: 100%;
+
     }
 
 
