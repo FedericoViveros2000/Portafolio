@@ -845,14 +845,14 @@ body.dark .container__slider--title{
 @media screen and (max-width:1300px){
     .container__slider--certificaciones{
         width: 90%;
-        height: 98vh;
+        height: 95vh;
     }
 }
 
 @media screen and (max-width:768px){
     .container__slider--certificaciones{
         width: 90%;
-        height: 45vh;
+        height: 60vh;
     }
 }
 
