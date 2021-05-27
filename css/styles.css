@@ -26,8 +26,30 @@
 }
 
 /* 
-    TODO Para el modo oscuro 
+    TODO Para el switch del traductor
 */
+
+
+.selected-lang{
+    width: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+}
+
+.selected-lang::before{
+    content: '';
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url(https://www.countryflags.io/be/flat/64.png);
+}
+
+/* 
+TODO Para el modo oscuro 
+*/
+
 
 /* Boton */
 
@@ -760,8 +782,8 @@ body.dark .footer__copyright {
     */
 
 .container__slider--certificaciones {
-    width: 65%;
-    height: 90vh;
+    width: 55%;
+    height: 75vh;
     max-width: 100%;
     margin: auto;
      overflow: hidden;
@@ -788,7 +810,7 @@ body.dark .container__slider--title{
 .slider__certificaciones {
 
     display: flex;
-    width: 300%;
+    width: 400%;
     height: 100%;
     margin-left: -100%;
 }
@@ -841,7 +863,7 @@ body.dark .container__slider--title{
 
 @media screen and (max-width:1300px){
     .container__slider--certificaciones{
-        width: 90%;
+        width: 80%;
         height: 45%;
     }
 
