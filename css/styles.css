@@ -782,8 +782,8 @@ body.dark .footer__copyright {
     */
 
 .container__slider--certificaciones {
-    width: 55%;
-    height: 75vh;
+    width: 45%;
+    height: 60vh;
     max-width: 100%;
     margin: auto;
      overflow: hidden;
