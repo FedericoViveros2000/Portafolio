@@ -36,23 +36,46 @@
 
     <!-- Seccion principal que vamos a observar cuando entremos al sitio -->
 
-    <header class="hero">
+    <header class="hero" id="es">
 
         <!-- Para el boton del modo oscuro -->
-        <div class="modo__oscuro">
-
-            <button class="switch" id="switch">
-
-                <span><img src="./img/bxs-sun.svg" alt="Sol"></span>
+        
 
 
-                <span><img src="./img/bxs-moon.svg" alt="Luna"></span>
+            <div class="modo__oscuro">
 
-            </button>
+                <nav class="container__traduction">
+    
+                    <div class="lang-menu">
+                        <div class="selected-lang">
+                            Español
+                        </div>
+                        
+                        <ul>
+                           
+                            <li>
+                                <a href="#" class="en">Inglés</a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </div>
+                </nav>
+    
+                <button class="switch" id="switch">
+    
+                    <span><img src="./img/bxs-sun.svg" alt="Sol"></span>
+    
+    
+                    <span><img src="./img/bxs-moon.svg" alt="Luna"></span>
+    
+                </button>
+    
+            </div>
+    
+            
 
-        </div>
 
-      
 
 
         <div class="hero__container container">
@@ -118,7 +141,7 @@
                     manera de avanzar en esta vida es aprendiendo dia tras dia nuevas cosas.</p>
 
                 <a href="./img/Curriculum_Jose_Viveros.pdf" download="CURRICULUM_VITAE_JOSE_VIVEROS"
-                    class="cta">Descargar CV</a>
+                    class="cta cta__download" >Descargar CV</a>
 
 
 
@@ -139,7 +162,7 @@
 
             <div class="container">
 
-                <h3 class="title">Habilidades Técnicas</h3>
+                <h3 class="title" id="tecnicas">Habilidades Técnicas</h3>
 
                 <p class="card__copy">Estas son mis habiidades técnicas más importantes: </p>
 
@@ -157,7 +180,7 @@
                         </figure>
 
                         <h3 class="card__title">CSS</h3>
-                        <p class="paragraph">Poseo conocimientos de los sistemas de flexbox y grid, además de
+                        <p class="paragraph" id="css">Poseo conocimientos de los sistemas de flexbox y grid, además de
                             animaciones con este lenguaje.</p>
 
                     </div>
@@ -173,7 +196,7 @@
 
                         <h3 class="card__title">Microsoft Office</h3>
 
-                        <p class="paragraph">Tengo conocimetos de la suite de office, más específicamente de las
+                        <p class="paragraph" id="office">Tengo conocimetos de la suite de office, más específicamente de las
                             herramientas de Power Point, Word y Excel.</p>
 
                     </div>
@@ -189,7 +212,7 @@
 
                         <h3 class="card__title">JavaScript</h3>
 
-                        <p class="paragraph">Poseo conocimientos en este principal lenguaje de programación y desarrollo
+                        <p class="paragraph" id="javascript">Poseo conocimientos en este principal lenguaje de programación y desarrollo
                             web.</p>
 
                     </div>
@@ -205,7 +228,7 @@
 
                         <h3 class="card__title">HTML5</h3>
 
-                        <p class="paragraph">Poseo conocimientos de maquetación con el principal lenguaje de maquetación
+                        <p class="paragraph" id="html">Poseo conocimientos de maquetación con el principal lenguaje de maquetación
                             de la web.</p>
                     </div>
 
@@ -226,9 +249,9 @@
 
             <div class="course__about">
 
-                <h2 class="title">¿Cuáles son mis principales virtudes?</h2>
+                <h2 class="title" id="principal1">¿Cuáles son mis principales virtudes?</h2>
 
-                <p class="about__paragraph">Entre mis principales virtudes, considero mi positivismo ante la vida y mis
+                <p class="about__paragraph" id="virtudes">Entre mis principales virtudes, considero mi positivismo ante la vida y mis
                     ganas de aprender más día a día, ya que estoy seguro que la unica manera de sobresalir en esta vida
                     es aprendiendo nuevas cosas.
 
@@ -253,9 +276,9 @@
 
             <div class="course__about course__about--left">
 
-                <h2 class="title">¿Cuáles son mis principales pasatiempos?</h2>
+                <h2 class="title" id="pasatiempos2">¿Cuáles son mis principales pasatiempos?</h2>
 
-                <p class="about__paragraph">Mi pasatiempo principal es el de programar, y desarrollar nuevos proyectos
+                <p class="about__paragraph" id="pasatiempo">Mi pasatiempo principal es el de programar, y desarrollar nuevos proyectos
                     en dicho ámbito, ya que considero que me enriquezen como persona y a la vez me aportan nuevos
                     conocimientos.</p>
 
@@ -267,7 +290,7 @@
         </section>
 
         <!-- PARA EL SLIDER DE LAS CERTIFICACIONES -->
-        <h4 class="container__slider--title">Certificados</h4>
+        <h4 class="container__slider--title" id="certificados">Certificados</h4>
 
         <section class="container__slider--certificaciones animado--normal">
 
@@ -333,7 +356,7 @@
 
                 <div class="footer__texts">
 
-                    <h2 class="title animado--normal2">¿Quieres contactarme?</h2>
+                    <h2 class="title animado--normal2" id="contact">¿Quieres contactarme?</h2>
 
                     <p class="footer__copy">
 
