@@ -2,6 +2,8 @@
     TODO Para las fuentes del sitio web
 */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css');
 
 
 /* 
@@ -25,25 +27,163 @@
     scroll-behavior: smooth;
 }
 
+.container__principal--modos{
+    width: 100%;
+    text-align: center;
+}
+
 /* 
     TODO Para el switch del traductor
 */
 
 
-.selected-lang{
-    width: 8vw;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    background-color: red;
+
+body {
+    font-family: 'Didact Gothic', sans-serif;
+    color:#333;
+        box-sizing: border-box;
 }
 
-.selected-lang::before{
+
+
+a {
+    text-decoration: none;
+}
+
+
+.container__traduction {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.lang-menu {
+    width: 100px;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 25px;
+    position: relative;
+}
+
+body.dark .lang-menu{
+    color: var(--color-title-dark);
+
+}
+
+.lang-menu .selected-lang {
+    display: flex;   
+    justify-content: space-between;
+    line-height: 2;
+    height: 50px;
+    cursor: pointer;
+}
+
+.lang-menu.active .selected-lang:before {
     content: '';
-    display: block;
+    display: inline-block;
     width: 32px;
     height: 32px;
-    background-image: url(https://www.countryflags.io/be/flat/64.png);
+    background-image: url(https://www.countryflags.io/us/flat/64.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.lang-menu .selected-lang:before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url(https://www.countryflags.io/es/flat/64.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.lang-menu ul {
+    margin: 0;
+    padding: 0;
+    display: none;
+    background-color: #fff;
+    border: 1px solid #f8f8f8;
+    position: absolute;
+    top: 45px;
+    right: 0px;
+    width: 125px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+}
+
+body.dark .lang-menu ul{
+    background-color: var(--color-title);
+    border: none;
+    border-radius: 5px;
+}
+
+
+.lang-menu ul li {
+    list-style: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lang-menu ul li a {
+    text-decoration: none;
+    width: 125px;
+    padding: 5px 10px;
+    display: block;
+}
+
+.lang-menu ul li a:hover{
+    color: var(--color-btn);
+}
+
+body.dark .lang-menu ul li a{
+    color: var(--color-title-dark);
+}
+
+.lang-menu ul li:hover {
+    transition: background-color .4s;
+    background-color: #f2f2f2;
+}
+
+body.dark .lang-menu ul li:hover{
+    background-color: var(--color-text);
+    border-radius: 5px;
+
+}
+
+
+
+.lang-menu ul li a:before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.lang-menu.active .en:before{
+    background-image: url(https://www.countryflags.io/es/flat/32.png);
+}
+
+.en:before{
+    background-image: url(https://www.countryflags.io/us/flat/32.png);
+}
+
+body.dark .en:hover{
+    color: var(--color-title);
+}
+
+
+.lang-menu:hover ul {
+    display: block;
 }
 
 /* 
@@ -54,16 +194,15 @@ TODO Para el modo oscuro
 /* Boton */
 
 .modo__oscuro {
-    width: 100%;
+    width: 70%;
     display: flex;
-    justify-content: flex-end;
-
+    align-items: flex-start;
+    margin: 0 auto;
 }
 
 .switch {
     position: relative;
     top: 30px;
-    right: 30px;
     margin: 0;
     background-color: #004BA4;
     border-radius: 1000px;
@@ -782,9 +921,8 @@ body.dark .footer__copyright {
     */
 
 .container__slider--certificaciones {
-    width: 45%;
-    height: 60vh;
-    max-width: 100%;
+    width: 35%;
+    height: 50vh;
     margin: auto;
      overflow: hidden;
     position: relative;
