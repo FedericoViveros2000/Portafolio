@@ -948,9 +948,10 @@ body.dark .container__slider--title{
 .slider__certificaciones {
 
     display: flex;
-    width: 400%;
+    width: 500%;
     height: 100%;
     margin-left: -100%;
+    
 }
 
 .slider__certificaciones--section {
