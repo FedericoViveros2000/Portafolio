@@ -407,6 +407,95 @@ body.dark .title {
     font-size: 20px;
 }
 
+.container__proyects{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.container__proyects--card:nth-child(1){
+    background-image: url(../img/sitio_1.PNG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+
+}
+.container__proyects--card:nth-child(2){
+    background-image: url(../img/sitio_2.PNG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    
+}
+.container__proyects--card:nth-child(3){
+    background-image: url(../img/sitio_3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+
+
+.container__proyects--card{
+    width: 25%;
+    height: 70%;
+    background-color: skyblue;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+body.dark .container__proyects--card:hover > .container__proyects--hover{
+    transform: translateY(0%);
+    background-color: rgba(37, 37, 37, 0.726);
+    
+}
+
+.container__proyects--title{
+    margin-top: 100px;
+}
+
+.container__proyects--hover{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    transform: translateY(250%);
+    transition: transform 1s ease, background-color 1s linear;
+}
+
+.container__proyects--card:hover > .container__proyects--hover{
+    transform: translateY(0%);
+    background-color: rgba(37, 37, 37, 0.726);
+    
+}
+
+.container__proyects--btn{
+    display: inline-block;
+    box-shadow: #fff 2px 2px 7px;
+    font-size: 14px;
+    padding: 15px 25px;
+}
+
+.container__proyects--images{
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container__img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
 /* Parte de quien soy */
 
 .instructor {
@@ -576,8 +665,13 @@ body.dark .card__item {
 }
 
 .card__title {
-    margin: 20px 0;
+    margin: 10px 0;
     font-size: 1.5rem;
+    color:#fff;
+}
+
+.card__title--habilities{
+    color: var(--color-title);
 }
 
 .card__paragraph {
@@ -663,6 +757,8 @@ body.dark .course__about {
 .course__picture--right {
     grid-column: 1/4;
 }
+
+
 
 .course__about--left {
     grid-column: 3/-1;
@@ -802,8 +898,39 @@ body.dark .footer__copyright {
         height: 750px;
     }
 
+    .container__proyects--title{
+        margin-top: 50px;
+    }
 
+    .container__proyects--card{
+        width: 90%;
+        height: 400px;
+    }
+    
+    .container__proyects--hover{
+        padding: 50px;
 
+    }
+
+    .hero__cta{
+        padding: 20px 0;
+    }
+
+    .container__proyects--btn{
+        display: block;
+        box-shadow: #fff 2px 2px 7px;
+        font-size: 1.125rem;
+    }
+
+    .container__proyects{
+        height: auto;
+        gap: 30px;
+    }
+
+    .container__proyects--btn{
+        
+        padding: 5px 10px;
+    }
 
 
     .hero__texts {
@@ -1060,6 +1187,7 @@ body.dark .container__slider--title{
         display: block;
         width: 90%;
         margin: 0 auto;
+        padding: 10px 0;
     }
 
     .title {

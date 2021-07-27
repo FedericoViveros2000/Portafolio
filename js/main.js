@@ -358,9 +358,11 @@ document.addEventListener('DOMContentLoaded', e => {
     const $virtudes = document.getElementById('virtudes');
     const $pasatiempos = document.getElementById('pasatiempo');
     const $certificados = document.getElementById('certificados');
+    const $proyectos = document.getElementById('proyectos');
     const $principal = document.getElementById('principal1');
     const $pasatiempos2 = document.getElementById('pasatiempos2');
     const $html = document.getElementById('html');
+    const $soy = document.getElementById('quien');
     const $css = document.getElementById('css');
     const $office = document.getElementById('office');
     const $javascript = document.getElementById('javascript');
@@ -398,6 +400,8 @@ document.addEventListener('DOMContentLoaded', e => {
 
         $certificates: 'Certificates',
 
+        $Iam: 'Who I am',
+
         $main: 'What are my main virtues?',
 
         $hobbies2: 'What are my main hobbies?',
@@ -411,6 +415,8 @@ document.addEventListener('DOMContentLoaded', e => {
         $javascript: 'I have knowledge in this main programming language and web development',
 
         $titleContact: 'Do you want to contact me?',
+
+        $proyects:'Proyects',
 
         $intered: 'If you are interested in my work, do not hesitate to contact me at:',
 
@@ -534,12 +540,14 @@ document.addEventListener('DOMContentLoaded', e => {
             $copy.textContent = english.$copy;
             $ctaDownload.textContent = english.$downloadCV;
             $virtudes.textContent = english.$virtues;
+            $soy.textContent = english.$Iam;
             $pasatiempos.textContent = english.$hobbies;
             $certificados.textContent = english.$certificates;
             $principal.textContent = english.$main;
             $pasatiempos2.textContent = english.$hobbies2;
             $html.textContent = english.$html;
             $css.textContent = english.$css;
+            $proyectos.textContent = english.$proyects;
             $javascript.textContent = english.$javascript;
             $office.textContent = english.$office;
             $footer.textContent = english.$footer;
