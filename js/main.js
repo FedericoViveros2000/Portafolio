@@ -350,6 +350,7 @@ document.addEventListener('DOMContentLoaded', e => {
     const $contactos = document.querySelector('.hero__cta');
     const $cta = document.querySelectorAll('.cta');
     const $ctaDownload = document.querySelector('.cta.cta__download');
+    const $develop = document.querySelectorAll('.site__develop');
     const $instructor = document.querySelector('.instructor__tag');
     const $about = document.querySelector('.about__paragraph');
     const $hardSkills = document.querySelector('#tecnicas');
@@ -363,6 +364,7 @@ document.addEventListener('DOMContentLoaded', e => {
     const $pasatiempos2 = document.getElementById('pasatiempos2');
     const $html = document.getElementById('html');
     const $soy = document.getElementById('quien');
+    const $ver = document.querySelectorAll('.container__proyects--btn');
     const $css = document.getElementById('css');
     const $office = document.getElementById('office');
     const $javascript = document.getElementById('javascript');
@@ -414,6 +416,10 @@ document.addEventListener('DOMContentLoaded', e => {
 
         $javascript: 'I have knowledge in this main programming language and web development',
 
+        $see: 'See more',
+
+        $site:'This site was developed with:',
+
         $titleContact: 'Do you want to contact me?',
 
         $proyects:'Proyects',
@@ -440,6 +446,8 @@ document.addEventListener('DOMContentLoaded', e => {
 
             $selected: 'Spanish',
 
+            $quienSoy :'Quién soy?',
+
             $espanol: 'Español',
 
             $ingles: 'Inglés',
@@ -454,11 +462,17 @@ document.addEventListener('DOMContentLoaded', e => {
 
             $certificates: 'Certificados',
 
+            $ver :'Ver mas',
+
             $main: '¿Cuáles son mis principales virtudes?',
 
             $hobbies2: '¿Cuáles son mis principales pasatiempos?',
 
+            $proyectosTra: 'Proyectos',
+
             $html: 'Poseo conocimientos de maquetación con el principal lenguaje de maquetación de la web.',
+
+            $sitio:'Este sitio fue desarrollado con: ',
 
             $css: 'Poseo conocimientos de los sistemas de flexbox y grid, además de animaciones con este lenguaje.',
 
@@ -534,6 +548,14 @@ document.addEventListener('DOMContentLoaded', e => {
 
             });
 
+            $ver.forEach(mas =>{
+                mas.textContent = english.$see;
+            })
+
+            $develop.forEach(develop =>{
+                develop.textContent = english.$site;
+            })
+
             $btnEnglish.textContent = english.$selected;
             $lang.textContent = english.$ingle;
             $hardSkills.textContent = english.$habilidades;
@@ -565,8 +587,7 @@ document.addEventListener('DOMContentLoaded', e => {
             $lang.textContent = english.espanol.$espanol;
             $btnEnglish.textContent = english.espanol.$ingles;
             $copy.textContent = english.espanol.$copy;
-            
-
+            $proyectos.textContent = english.espanol.$proyectosTra;
             
 
             $cta.forEach(ct => {
@@ -574,6 +595,14 @@ document.addEventListener('DOMContentLoaded', e => {
                 ct.textContent = english.espanol.$contactar;
 
             });
+
+            $ver.forEach(mas =>{
+                mas.textContent = english.espanol.$ver;
+            })
+
+            $develop.forEach(develop =>{
+                develop.textContent = english.espanol.$sitio;
+            })
 
             $ctaDownload.textContent = english.espanol.$downloadCV;
 
@@ -587,6 +616,7 @@ document.addEventListener('DOMContentLoaded', e => {
             $html.textContent = english.espanol.$html;
             $css.textContent = english.espanol.$css;
             $javascript.textContent = english.espanol.$javascript;
+            $soy.textContent = english.espanol.$quienSoy;
             $office.textContent = english.espanol.$office;
             $footer.textContent = english.espanol.$footer;
             $contact.textContent = english.espanol.$titleContact;
@@ -594,9 +624,8 @@ document.addEventListener('DOMContentLoaded', e => {
 
 
         }
+
     }
-
-
 
 
 })
