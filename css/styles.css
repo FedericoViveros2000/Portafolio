@@ -1049,9 +1049,8 @@ body.dark .footer__copyright {
 
 .container__slider--certificaciones {
     width: 35%;
-    height: 50vh;
     margin: auto;
-     overflow: hidden;
+    overflow: hidden;
     position: relative;
     border-radius: 3px;
     box-shadow: 1px 3px 10px rgba(65, 64, 64, 0.411);
@@ -1076,7 +1075,7 @@ body.dark .container__slider--title{
 
     display: flex;
     width: 500%;
-    height: 100%;
+    height: 80vh;
     margin-left: -100%;
     
 }
@@ -1088,8 +1087,7 @@ body.dark .container__slider--title{
 }
 
 .slider__img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
     object-fit: cover;
 }
 
