@@ -1104,7 +1104,7 @@ body.dark .container__slider--title {
 
     display: flex;
     width: 500%;
-    max-height: 80vh;
+    height: 80vh;
     margin-left: -100%;
 
 }
