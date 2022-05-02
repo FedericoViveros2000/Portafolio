@@ -474,6 +474,7 @@ document.addEventListener('DOMContentLoaded', e => {
             $proyectosTra: 'Proyectos',
 
             $html: 'Poseo conocimientos de maquetación con el principal lenguaje de maquetación de la web.',
+            $vuejs: 'Poseo conocimientos del framework progresivo Vue js, las API`s tanto de composición (Composition API) y la de Opciones (Options API), y ademas poseo conocimientos acerca del manejo global del estado con VUEX.',
 
             $sitio:'Este sitio fue desarrollado con: ',
 
@@ -588,6 +589,7 @@ document.addEventListener('DOMContentLoaded', e => {
             $contactos.textContent = english.espanol.$contactar;
             $about.textContent = english.espanol.$descripcion;
             $lang.classList.remove('active');
+            $vuejs.textContent = english.espanol.$vuejs;
             $lang.textContent = english.espanol.$espanol;
             $btnEnglish.textContent = english.espanol.$ingles;
             $copy.textContent = english.espanol.$copy;
