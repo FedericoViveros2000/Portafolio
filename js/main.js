@@ -371,6 +371,7 @@ document.addEventListener('DOMContentLoaded', e => {
     const $contact = document.getElementById('contact');
     const $footerCopy = document.querySelector('.footer__copy');
     const $footer = document.querySelector('.footer__copyright');
+    const $vuejs = document.getElementById('vuejs');
 
     const english = {
 
@@ -383,7 +384,7 @@ document.addEventListener('DOMContentLoaded', e => {
 
         $objetivo: 'My main objective today is to apply my theoretical and practical knowledge learned during my academic training, in order to benefit the organization and at the same time develop myself personally and professionally.',
 
-        $descripcion: 'I am an 18 year old young man, passionate about everything that has to do with technology, more specifically with programming, I am currently studying Computer Engineering and apart from that I am training in a self-taught way since I consider that the only way To advance in this life is to learn new things day after day.',
+        $descripcion: 'I am an 19 year old young man, passionate about everything that has to do with technology, more specifically with programming, I am currently studying Computer Engineering and apart from that I am training in a self-taught way since I consider that the only way To advance in this life is to learn new things day after day.',
 
 
         $contactar: 'Contact',
@@ -411,6 +412,8 @@ document.addEventListener('DOMContentLoaded', e => {
         $html: 'I have knowledge of layout with the main layout language of the web.',
 
         $css: 'I have knowledge of flexbox and grid systems, as well as animations with this language.',
+
+        $vuejs: 'I have knowledge of the Vue js progressive framework, both the Composition API and the Options API, and I also have knowledge about global state management with VUEX.',
 
         $office: 'I have knowledge of the office suite, more specifically of the Power Point, Word and Excel tools.',
 
@@ -440,7 +443,7 @@ document.addEventListener('DOMContentLoaded', e => {
 
             $objetivo: 'Mi principal objetivo actualmente, es el de aplicar mis conocimientos tanto teóricos y prácticos aprendidos durante mi formación académi con el fin de beneficiar a la organización y a la vez desarrollarme de forma personal y profesional.',
 
-            $descripcion: 'Soy un joven de 18 años, apasionado por todo lo que tenga que ver con la tecnología, más especificamente con la programación, actualme curso la carrera de Ingenieria en Informática y aparte de eso me estoy formando de manera autodidacta ya que considero que la única manera de avanzar en esta vida es aprendiendo dia tras dia nue cosas.',
+            $descripcion: 'Soy un joven de 19 años, apasionado por todo lo que tenga que ver con la tecnología, más especificamente con la programación, actualme curso la carrera de Ingenieria en Informática y aparte de eso me estoy formando de manera autodidacta ya que considero que la única manera de avanzar en esta vida es aprendiendo dia tras dia nue cosas.',
 
             $downloadCV: 'Descargar CV',
 
@@ -568,6 +571,7 @@ document.addEventListener('DOMContentLoaded', e => {
             $principal.textContent = english.$main;
             $pasatiempos2.textContent = english.$hobbies2;
             $html.textContent = english.$html;
+            $vuejs.textContent = english.$vuejs;
             $css.textContent = english.$css;
             $proyectos.textContent = english.$proyects;
             $javascript.textContent = english.$javascript;

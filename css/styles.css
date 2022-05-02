@@ -85,7 +85,7 @@ body.dark .lang-menu {
     display: inline-block;
     width: 32px;
     height: 32px;
-    background-image: url(https://www.countryflags.io/us/flat/64.png);
+    background-image: url(../img/estados-unidos.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -95,7 +95,7 @@ body.dark .lang-menu {
     display: inline-block;
     width: 32px;
     height: 32px;
-    background-image: url(https://www.countryflags.io/es/flat/64.png);
+    background-image: url(../img/espana.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -1077,7 +1077,6 @@ body.dark .footer__copyright {
     */
 
 .container__slider--certificaciones {
-    width: 35%;
     margin: auto;
     overflow: hidden;
     position: relative;
@@ -1101,12 +1100,10 @@ body.dark .container__slider--title {
 }
 
 .slider__certificaciones {
-
     display: flex;
     width: 500%;
     height: 80vh;
     margin-left: -100%;
-
 }
 
 .slider__certificaciones--section {
@@ -1173,6 +1170,9 @@ body.dark .container__slider--title {
     .slider__img {
         height: 100%;
     }
+    .slider__certificaciones{
+        height: auto;
+    }
 }
 
 
@@ -1192,7 +1192,6 @@ body.dark .container__slider--title {
 
     .slider__img {
         height: 100%;
-
     }
 
 
