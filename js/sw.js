@@ -53,7 +53,7 @@ self.addEventListener('activate', e=> {
 
 self.addEventListener('fetch', e=> {
 //Responde ya sea con el objeto en cache o continua con una busqueda de una url real.
-e.responseWith(
+e.respondWith(
     caches.match(e.request)
     .then(res => {
         if (res) {
