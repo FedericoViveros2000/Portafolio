@@ -5,13 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0996FB">
 
-    <title>Portafolio | José Viveros</title>
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#0996FB">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0996FB">
+
+    <!-- Para los dispositivos de apple -->
+
+    <link rel="apple-touch-icon" href="./img//Icons/icons-512x512.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    
+    <script src="https://kit.fontawesome.com/552b72054f.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-startup-image" href="./img/Icons/icons-512x512.png" type="image/png">
+
+    <!-- Llamando el archivo manifest para las configuraciones de la PWA -->
+    <link rel="manifest" href="./manifest.json">
 
     <!-- Para el FAVICON -->
-    <link rel="shortcut icon" href="./img/imagen.svg" type="image/x-icon">
-
+    <link rel="shortcut icon" href="./img/imagen.svg" type="image/png">
 
     <!-- Para referenciar al archivo CSS -->
     <link rel="stylesheet" href="./css/styles.css">
@@ -20,16 +32,7 @@
 
     <link rel="stylesheet" href="./css/normalize.css">
 
-    <!-- Para los dispositivos de apple -->
-
-    <link rel="apple-touch-icon" href="/img/imagen.svg">
-
-
-    <!-- Para los iconos -->
-
-    <link rel="stylesheet" href="./css/all.min.css">
-
-    <script src="https://kit.fontawesome.com/552b72054f.js" crossorigin="anonymous"></script>
+    <title>Portafolio | José Viveros</title>
 </head>
 
 <body>
@@ -39,41 +42,41 @@
     <header class="hero" id="es">
 
         <!-- Para el boton del modo oscuro -->
-        
 
 
-            <div class="modo__oscuro">
 
-                <nav class="container__traduction">
-    
-                    <div class="lang-menu">
-                        <div class="selected-lang">
-                            Español
-                        </div>
-                        
-                        <ul>
-                           
-                            <li>
-                                <a href="#" class="en">Inglés</a>
-                            </li>
-                            
-                        </ul>
-                        
+        <div class="modo__oscuro">
+
+            <nav class="container__traduction">
+
+                <div class="lang-menu">
+                    <div class="selected-lang">
+                        Español
                     </div>
-                </nav>
-    
-                <button class="switch" id="switch">
-    
-                    <span><img src="./img/bxs-sun.svg" alt="Sol"></span>
-    
-    
-                    <span><img src="./img/bxs-moon.svg" alt="Luna"></span>
-    
-                </button>
-    
-            </div>
-    
-            
+
+                    <ul>
+
+                        <li>
+                            <a href="#" class="en">Inglés</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </nav>
+
+            <button class="switch" id="switch">
+
+                <span><img src="./img/bxs-sun.svg" alt="Sol"></span>
+
+
+                <span><img src="./img/bxs-moon.svg" alt="Luna"></span>
+
+            </button>
+
+        </div>
+
+
 
 
 
@@ -141,7 +144,7 @@
                     manera de avanzar en esta vida es aprendiendo dia tras dia nuevas cosas.</p>
 
                 <a href="./img/Curriculum_Jose_Viveros.pdf" download="CURRICULUM_VITAE_JOSE_VIVEROS"
-                    class="cta cta__download" >Descargar CV</a>
+                    class="cta cta__download">Descargar CV</a>
 
             </div>
 
@@ -173,7 +176,8 @@
 
                         <h3 class="card__title card__title--habilities">CSS</h3>
                         <p class="paragraph" id="css">
-                            Poseo conocimientos de los sistemas de maquetación como lo son Flexbox y Grid a parte de manejar frameworks como:
+                            Poseo conocimientos de los sistemas de maquetación como lo son Flexbox y Grid a parte de
+                            manejar frameworks como:
                         </p>
                         <p class="paragraph-list">☑️ Tailwind CSS (Framework CSS basado en utilidades)</p>
                         <p class="paragraph-list">☑️ Bootstrap (Framework CSS basado en componentes)</p>
@@ -191,7 +195,9 @@
 
                         <h3 class="card__title card__title--habilities">Vue js</h3>
 
-                        <p class="paragraph" id="vuejs" >Poseo conocimientos del framework progresivo Vue js, las API's tanto de composición (Composition API) y la de Opciones (Options API), y ademas poseo conocimientos acerca del manejo global del estado con VUEX.</p>
+                        <p class="paragraph" id="vuejs">Poseo conocimientos del framework progresivo Vue js, las API's
+                            tanto de composición (Composition API) y la de Opciones (Options API), y ademas poseo
+                            conocimientos acerca del manejo global del estado con VUEX.</p>
 
                     </div>
 
@@ -206,7 +212,9 @@
 
                         <h3 class="card__title card__title--habilities">JavaScript</h3>
 
-                        <p class="paragraph" id="javascript">Poseo conocimientos en el principal lenguaje de programación de la web, manejo temas como el consumo de API's, la programación funcional, el asíncronismo, etc.</p>
+                        <p class="paragraph" id="javascript">Poseo conocimientos en el principal lenguaje de
+                            programación de la web, manejo temas como el consumo de API's, la programación funcional, el
+                            asíncronismo, etc.</p>
 
                     </div>
 
@@ -221,7 +229,8 @@
 
                         <h3 class="card__title card__title--habilities">HTML5</h3>
 
-                        <p class="paragraph" id="html">Poseo conocimientos del lenguaje de maquetación y estructuración del contenido web.</p>
+                        <p class="paragraph" id="html">Poseo conocimientos del lenguaje de maquetación y estructuración
+                            del contenido web.</p>
                     </div>
 
 
@@ -232,7 +241,7 @@
         </section>
 
         <h3 class="container__slider--title container__proyects--title" id="proyectos">Proyectos</h3>
-        
+
         <section class="container__proyects">
 
 
@@ -242,7 +251,7 @@
                 <div class="container__proyects--hover">
 
                     <h3 class="card__title site__develop">Este sitio fue desarrollado con:</h3>
-    
+
                     <div class="container__proyects--images">
 
                         <img src="./img/html-5.svg" alt="" class="container__img">
@@ -253,8 +262,8 @@
                     </div>
 
                     <a href=" https://federicoviveros2000.github.io/Bootmark/" target="_blank"
-                    class="hero__cta container__proyects--btn">Ver sitio</a>
-                   
+                        class="hero__cta container__proyects--btn">Ver sitio</a>
+
                 </div>
 
 
@@ -266,7 +275,7 @@
                 <div class="container__proyects--hover">
 
                     <h3 class="card__title site__develop">Este sitio fue desarrollado con:</h3>
-    
+
                     <div class="container__proyects--images">
 
                         <img src="./img/html-5.svg" alt="" class="container__img">
@@ -277,20 +286,20 @@
                     </div>
 
                     <a href=" https://federicoviveros2000.github.io/Coronavirus/" target="_blank"
-                    class="hero__cta container__proyects--btn">Ver sitio</a>
-                   
+                        class="hero__cta container__proyects--btn">Ver sitio</a>
+
                 </div>
 
 
             </article>
-            
+
             <article class="container__proyects--card">
 
 
                 <div class="container__proyects--hover">
 
                     <h3 class="card__title site__develop">Este sitio fue desarrollado con:</h3>
-    
+
                     <div class="container__proyects--images">
 
                         <img src="./img/html-5.svg" alt="" class="container__img">
@@ -301,14 +310,14 @@
                     </div>
 
                     <a href="https://federicoviveros2000.github.io/Countries/" target="_blank"
-                    class="hero__cta container__proyects--btn">Ver sitio</a>
-                   
+                        class="hero__cta container__proyects--btn">Ver sitio</a>
+
                 </div>
 
 
             </article>
 
-           
+
 
 
         </section>
@@ -325,7 +334,8 @@
 
                 <h2 class="title" id="principal1">¿Cuáles son mis principales virtudes?</h2>
 
-                <p class="about__paragraph" id="virtudes">Entre mis principales virtudes, considero mi positivismo ante la vida y mis
+                <p class="about__paragraph" id="virtudes">Entre mis principales virtudes, considero mi positivismo ante
+                    la vida y mis
                     ganas de aprender más día a día, ya que estoy seguro que la unica manera de sobresalir en esta vida
                     es aprendiendo nuevas cosas.
 
@@ -352,7 +362,8 @@
 
                 <h2 class="title" id="pasatiempos2">¿Cuáles son mis principales pasatiempos?</h2>
 
-                <p class="about__paragraph" id="pasatiempo">Mi pasatiempo principal es el de programar, y desarrollar nuevos proyectos
+                <p class="about__paragraph" id="pasatiempo">Mi pasatiempo principal es el de programar, y desarrollar
+                    nuevos proyectos
                     en dicho ámbito, ya que considero que me enriquezen como persona y a la vez me aportan nuevos
                     conocimientos.</p>
 
@@ -395,19 +406,19 @@
 
                 <div class="slider__certificaciones--section">
 
-                    <img loading="lazy" src="./img/vue_course.JPG" alt="Certificado de Componentes y Composition API con Vue js" class="slider__img">
+                    <img loading="lazy" src="./img/vue_course.JPG"
+                        alt="Certificado de Componentes y Composition API con Vue js" class="slider__img">
 
                 </div>
 
                 <div class="slider__certificaciones--section">
 
-                    <img loading="lazy" src="./img/Vue js.JPG" alt="Reactividad en Vue js"
-                        class="slider__img">
+                    <img loading="lazy" src="./img/Vue js.JPG" alt="Reactividad en Vue js" class="slider__img">
 
                 </div>
 
 
-               
+
             </div>
 
 

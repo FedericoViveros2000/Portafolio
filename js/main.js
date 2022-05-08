@@ -1,3 +1,9 @@
+/* Validando que el navegador mediante el cual estamos accediendo sea compatible con los Service Workers para la PWA */
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./js/sw.js')
+    .then(reg => console.log(`Registro de SW exitoso ${reg}`))
+    .catch(err => console.warn(`Error al tratar de registrar el SW: ${err}`))
+}
 document.addEventListener('DOMContentLoaded', e => {
 
     const btnSwitch = document.querySelector('#switch');

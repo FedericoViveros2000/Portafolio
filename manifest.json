@@ -1,0 +1,55 @@
+{
+    "name": "Jose Viveros",
+    "short_name": "Portfolio JV",
+    "description": "Buenos días, tardes o noches 👋. Soy José Viveros, y aquí podrá observar algunas de mis habilidades y aptitudes como Desarrollador Junior.",
+    "background_color": "#fff",
+    "theme_color": "#0996FB",
+    "orientation": "portrait",
+    "display": "standalone",
+    "start_url": "./",
+    "scope": "./",
+    "lang": "es-PY",
+    
+    "icons":[
+        {
+            "src": "./img/Icons/icons-512x512.png",
+            "sizes": "512x512",
+            "type":"image/png"
+        },
+        {
+            "src": "./img/Icons/icons-384x384.png",
+            "sizes": "384x384",
+            "type":"image/png"
+        },
+        {
+            "src": "./img/Icons/icons-256x256.png",
+            "sizes": "256x256",
+            "type":"image/png"
+        },
+        {
+            "src": "./img/Icons/icons-192x192.png",
+            "sizes": "192x192",
+            "type":"image/png"
+        },
+        {
+            "src": "./img/Icons/icons-128x128.png",
+            "sizes": "128x128",
+            "type":"image/png"
+        },
+        {
+            "src": "./img/Icons/icons-96x96.png",
+            "sizes": "96x96",
+            "type":"image/png"
+        },
+        {
+            "src": "./img/Icons/icons-64x64.png",
+            "sizes": "64x64",
+            "type":"image/png"
+        },
+        {
+            "src": "./img/Icons/icons-32x32.png",
+            "sizes": "32x32",
+            "type":"image/png"
+        }
+    ]
+}
