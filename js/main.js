@@ -2,9 +2,7 @@ import { mostrarScroll, mostrarScrollAbajo, mostrarScrollArriba, mostrarScrollDe
 
 /* Validando que el navegador mediante el cual estamos accediendo sea compatible con los Service Workers para la PWA */
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./js/sw.js',{
-        scope: './js/',
-      })
+    navigator.serviceWorker.register('./js/sw.js')
     .then(reg => console.log(`Registro de SW exitoso ${reg}`))
     .catch(err => console.warn(`Error al tratar de registrar el SW: ${err}`))
 }
@@ -34,6 +32,7 @@ document.addEventListener('DOMContentLoaded', e => {
 
     });
 
+    //TODO Escuchando los eventos del Scroll para ejecutar las animaciones
     window.addEventListener('scroll', mostrarScroll);
 
 
@@ -181,134 +180,8 @@ document.addEventListener('DOMContentLoaded', e => {
     const $footer = document.querySelector('.footer__copyright');
     const $vuejs = document.getElementById('vuejs');
 
-    const english = {
-
-        $presentacion: 'Good morning 👋. I am José Viveros, and here you can see some of my skills and abilities as a Junior Developer.',
-
-        $cargo: 'Web Developer Junior',
-
-
-        $downloadCV: 'Download CV',
-
-        $objetivo: 'My main objective today is to apply my theoretical and practical knowledge learned during my academic training, in order to benefit the organization and at the same time develop myself personally and professionally.',
-
-        $descripcion: 'I am an 19 year old young man, passionate about everything that has to do with technology, more specifically with programming, I am currently studying Computer Engineering and apart from that I am training in a self-taught way since I consider that the only way To advance in this life is to learn new things day after day.',
-
-
-        $contactar: 'Contact',
-
-        $selected: 'Spanish',
-
-        $ingle: 'English',
-
-        $habilidades: 'Technical skills',
-
-        $copy: 'These are my most important technical skills:',
-
-        $virtues: 'Among my main virtues, I consider my positivism towards life and my desire to learn more day by day, since I am sure that the only way to excel in this life it is learning new things.',
-
-        $hobbies: 'My main hobby is programming, and developing new projects in this area, since I consider that they enrich me as a person and at the same time bring me new knowledge.',
-
-        $certificates: 'Certificates',
-
-        $Iam: 'Who I am',
-
-        $main: 'What are my main virtues?',
-
-        $hobbies2: 'What are my main hobbies?',
-
-        $html: 'I have knowledge of layout with the main layout language of the web.',
-
-        $css: 'I have knowledge of flexbox and grid systems, as well as animations with this language.',
-
-        $vuejs: 'I have knowledge of the Vue js progressive framework, both the Composition API and the Options API, and I also have knowledge about global state management with VUEX.',
-
-        $office: 'I have knowledge of the office suite, more specifically of the Power Point, Word and Excel tools.',
-
-        $javascript: 'I have knowledge in this main programming language and web development',
-
-        $see: 'See more',
-
-        $site:'This site was developed with:',
-
-        $titleContact: 'Do you want to contact me?',
-
-        $proyects:'Proyects',
-
-        $intered: 'If you are interested in my work, do not hesitate to contact me at:',
-
-        $footer: 'Website created by © JosFe:',
-
-        /* Objeto para traducir al espanol */
-
-        espanol: {
-
-            $presentacion: 'Buenos días 👋. Soy José Viveros, y aquí podrá observar algunas de mis habilidades y aptitudes como Desarrollador Junior.',
-
-            $cargo: 'Desarrollador Web Junior',
-
-            $contactar: 'Contactar',
-
-            $objetivo: 'Mi principal objetivo actualmente, es el de aplicar mis conocimientos tanto teóricos y prácticos aprendidos durante mi formación académi con el fin de beneficiar a la organización y a la vez desarrollarme de forma personal y profesional.',
-
-            $descripcion: 'Soy un joven de 19 años, apasionado por todo lo que tenga que ver con la tecnología, más especificamente con la programación, actualme curso la carrera de Ingenieria en Informática y aparte de eso me estoy formando de manera autodidacta ya que considero que la única manera de avanzar en esta vida es aprendiendo dia tras dia nue cosas.',
-
-            $downloadCV: 'Descargar CV',
-
-            $selected: 'Spanish',
-
-            $quienSoy :'Quién soy?',
-
-            $espanol: 'Español',
-
-            $ingles: 'Inglés',
-
-            $habilidades: 'Habilidades Técnicas',
-
-            $copy: 'Estas son mis habiidades técnicas más importantes: ',
-
-            $virtues: 'Entre mis principales virtudes, considero mi positivismo ante la vida y mis  ganas de aprender más día a día, ya que estoy seguro que la unica manera de sobresalir en esta vida es aprendiendo nuevas cosas.',
-
-            $hobbies: 'Mi pasatiempo principal es el de programar, y desarrollar nuevos proyectos en dicho ámbito, ya que considero que me enriquezen como persona y a la vez me aportan nuevos conocimientos.',
-
-            $certificates: 'Certificados',
-
-            $ver :'Ver mas',
-
-            $main: '¿Cuáles son mis principales virtudes?',
-
-            $hobbies2: '¿Cuáles son mis principales pasatiempos?',
-
-            $proyectosTra: 'Proyectos',
-
-            $html: 'Poseo conocimientos de maquetación con el principal lenguaje de maquetación de la web.',
-            $vuejs: 'Poseo conocimientos del framework progresivo Vue js, las API`s tanto de composición (Composition API) y la de Opciones (Options API), y ademas poseo conocimientos acerca del manejo global del estado con VUEX.',
-
-            $sitio:'Este sitio fue desarrollado con: ',
-
-            $css: 'Poseo conocimientos de los sistemas de flexbox y grid, además de animaciones con este lenguaje.',
-
-            $office: 'Tengo conocimetos de la suite de office, más específicamente de las herramientas de Power Point, Word y Excel.',
-
-            $javascript: 'Poseo conocimientos en este principal lenguaje de programación y desarrollo web.',
-
-            $titleContact: '¿Quieres contactarme?',
-
-            $intered: 'Si estas interesado en mi trabajo no dudes en contactarme en:',
-
-            $footer: 'Sitio Web creado por &copy JosFe:',
-
-        }
-
-
-    }
-
-
-
-
     const ver = document.getElementById('lang');
     
-
 
     $btnEnglish.addEventListener('click', e => {
 
@@ -340,104 +213,109 @@ document.addEventListener('DOMContentLoaded', e => {
     })
 
 
-
-
     /* Funcion para traducir los idiomas */
 
     function traducirInglesFunc() {
 
-        if (ver.getAttribute('lang') === 'en') {
+        fetch('./js/modules/lang.json')
+        .then(res => res.json())
+        .then(res => {
+            console.log(res)
+            if (ver.getAttribute('lang') === 'en') {
+    
+                $content.textContent = res.english.$presentacion;
+                $acerca.textContent = res.english.$objetivo;
+                $instructor.textContent = res.english.$cargo;
+                $about.textContent = res.english.$descripcion;
+                $contactos.textContent = res.english.$contactar;
+    
+                $cta.forEach(ct => {
+    
+                    ct.textContent = res.english.$contactar;
+    
+                });
+    
+                $ver.forEach(mas =>{
+                    mas.textContent = res.english.$see;
+                })
+    
+                $develop.forEach(develop =>{
+                    develop.textContent = res.english.$site;
+                })
+    
+                $btnEnglish.textContent = res.english.$selected;
+                $lang.textContent = res.english.$ingle;
+                $hardSkills.textContent = res.english.$habilidades;
+                $copy.textContent = res.english.$copy;
+                $ctaDownload.textContent = res.english.$downloadCV;
+                $virtudes.textContent = res.english.$virtues;
+                $soy.textContent = res.english.$Iam;
+                $pasatiempos.textContent = res.english.$hobbies;
+                $certificados.textContent = res.english.$certificates;
+                $principal.textContent = res.english.$main;
+                $pasatiempos2.textContent = res.english.$hobbies2;
+                $html.textContent = res.english.$html;
+                $vuejs.textContent = res.english.$vuejs;
+                $css.textContent = res.english.$css;
+                $proyectos.textContent = res.english.$proyects;
+                $javascript.textContent = res.english.$javascript;
+                $office.textContent = res.english.$office;
+                $footer.textContent = res.english.$footer;
+                $contact.textContent = res.english.$titleContact;
+                $footerCopy.textContent = res.english.$intered;
+    
+            } else if (ver.getAttribute('lang') === 'es') {
+    
+    
+                $content.textContent = res.espanol.$presentacion;
+                $acerca.textContent = res.espanol.$descripcion;
+                $contactos.textContent = res.espanol.$contactar;
+                $about.textContent = res.espanol.$descripcion;
+                $lang.classList.remove('active');
+                $vuejs.textContent = res.espanol.$vuejs;
+                $lang.textContent = res.espanol.$espanol;
+                $btnEnglish.textContent = res.espanol.$ingles;
+                $copy.textContent = res.espanol.$copy;
+                $proyectos.textContent = res.espanol.$proyectosTra;
+                
+    
+                $cta.forEach(ct => {
+    
+                    ct.textContent = res.espanol.$contactar;
+    
+                });
+    
+                $ver.forEach(mas =>{
+                    mas.textContent = res.espanol.$ver;
+                })
+    
+                $develop.forEach(develop =>{
+                    develop.textContent = res.espanol.$sitio;
+                })
+    
+                $ctaDownload.textContent = res.espanol.$downloadCV;
+    
+                $hardSkills.textContent = res.espanol.$habilidades;
+    
+                $virtudes.textContent = res.espanol.$virtues;
+                $pasatiempos.textContent = res.espanol.$hobbies;
+                $certificados.textContent = res.espanol.$certificates;
+                $principal.textContent = res.espanol.$main;
+                $pasatiempos2.textContent = res.espanol.$hobbies2;
+                $html.textContent = res.espanol.$html;
+                $css.textContent = res.espanol.$css;
+                $javascript.textContent = res.espanol.$javascript;
+                $soy.textContent = res.espanol.$quienSoy;
+                $office.textContent = res.espanol.$office;
+                $footer.textContent = res.espanol.$footer;
+                $contact.textContent = res.espanol.$titleContact;
+                $footerCopy.textContent = res.espanol.$intered;
+    
+    
+            }
+        })
+        .catch(err => console.log(`Ha ocurrido un error al intentar traducir la pagina ${err} `))
 
-            $content.textContent = english.$presentacion;
-            $acerca.textContent = english.$objetivo;
-            $instructor.textContent = english.$cargo;
-            $about.textContent = english.$descripcion;
-            $contactos.textContent = english.$contactar;
-
-            $cta.forEach(ct => {
-
-                ct.textContent = english.$contactar;
-
-            });
-
-            $ver.forEach(mas =>{
-                mas.textContent = english.$see;
-            })
-
-            $develop.forEach(develop =>{
-                develop.textContent = english.$site;
-            })
-
-            $btnEnglish.textContent = english.$selected;
-            $lang.textContent = english.$ingle;
-            $hardSkills.textContent = english.$habilidades;
-            $copy.textContent = english.$copy;
-            $ctaDownload.textContent = english.$downloadCV;
-            $virtudes.textContent = english.$virtues;
-            $soy.textContent = english.$Iam;
-            $pasatiempos.textContent = english.$hobbies;
-            $certificados.textContent = english.$certificates;
-            $principal.textContent = english.$main;
-            $pasatiempos2.textContent = english.$hobbies2;
-            $html.textContent = english.$html;
-            $vuejs.textContent = english.$vuejs;
-            $css.textContent = english.$css;
-            $proyectos.textContent = english.$proyects;
-            $javascript.textContent = english.$javascript;
-            $office.textContent = english.$office;
-            $footer.textContent = english.$footer;
-            $contact.textContent = english.$titleContact;
-            $footerCopy.textContent = english.$intered;
-
-        } else if (ver.getAttribute('lang') === 'es') {
-
-
-            $content.textContent = english.espanol.$presentacion;
-            $acerca.textContent = english.espanol.$descripcion;
-            $contactos.textContent = english.espanol.$contactar;
-            $about.textContent = english.espanol.$descripcion;
-            $lang.classList.remove('active');
-            $vuejs.textContent = english.espanol.$vuejs;
-            $lang.textContent = english.espanol.$espanol;
-            $btnEnglish.textContent = english.espanol.$ingles;
-            $copy.textContent = english.espanol.$copy;
-            $proyectos.textContent = english.espanol.$proyectosTra;
-            
-
-            $cta.forEach(ct => {
-
-                ct.textContent = english.espanol.$contactar;
-
-            });
-
-            $ver.forEach(mas =>{
-                mas.textContent = english.espanol.$ver;
-            })
-
-            $develop.forEach(develop =>{
-                develop.textContent = english.espanol.$sitio;
-            })
-
-            $ctaDownload.textContent = english.espanol.$downloadCV;
-
-            $hardSkills.textContent = english.espanol.$habilidades;
-
-            $virtudes.textContent = english.espanol.$virtues;
-            $pasatiempos.textContent = english.espanol.$hobbies;
-            $certificados.textContent = english.espanol.$certificates;
-            $principal.textContent = english.espanol.$main;
-            $pasatiempos2.textContent = english.espanol.$hobbies2;
-            $html.textContent = english.espanol.$html;
-            $css.textContent = english.espanol.$css;
-            $javascript.textContent = english.espanol.$javascript;
-            $soy.textContent = english.espanol.$quienSoy;
-            $office.textContent = english.espanol.$office;
-            $footer.textContent = english.espanol.$footer;
-            $contact.textContent = english.espanol.$titleContact;
-            $footerCopy.textContent = english.espanol.$intered;
-
-
-        }
 
     }
 

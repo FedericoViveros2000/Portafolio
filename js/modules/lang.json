@@ -1,0 +1,118 @@
+{
+    "english": {
+
+        "$presentacion": "Good morning 👋. I am José Viveros, and here you can see some of my skills and abilities as a Junior Developer.",
+
+        "$cargo": "Web Developer Junior",
+
+        "$downloadCV": "Download CV",
+
+        "$objetivo": "My main objective today is to apply my theoretical and practical knowledge learned during my academic training, in order to benefit the organization and at the same time develop myself personally and professionally.",
+
+        "$descripcion": "I am an 19 year old young man, passionate about everything that has to do with technology, more specifically with programming, I am currently studying Computer Engineering and apart from that I am training in a self-taught way since I consider that the only way To advance in this life is to learn new things day after day.",
+
+        "$contactar": "Contact",
+
+        "$selected": "Spanish",
+
+        "$ingle": "English",
+
+        "$habilidades": "Technical skills",
+
+        "$copy": "These are my most important technical skills:",
+
+        "$virtues": "Among my main virtues, I consider my positivism towards life and my desire to learn more day by day, since I am sure that the only way to excel in this life it is learning new things.",
+
+        "$hobbies": "My main hobby is programming, and developing new projects in this area, since I consider that they enrich me as a person and at the same time bring me new knowledge.",
+
+        "$certificates": "Certificates",
+
+        "$Iam": "Who I am",
+
+        "$main": "What are my main virtues?",
+
+        "$hobbies2": "What are my main hobbies?",
+
+        "$html": "I have knowledge of layout with the main layout language of the web.",
+
+        "$css": "I have knowledge of flexbox and grid systems, as well as animations with this language.",
+
+        "$vuejs": "I have knowledge of the Vue js progressive framework, both the Composition API and the Options API, and I also have knowledge about global state management with VUEX.",
+
+        "$office": "I have knowledge of the office suite, more specifically of the Power Point, Word and Excel tools.",
+
+        "$javascript": "I have knowledge in this main programming language and web development",
+
+        "$see": "See more",
+
+        "$site": "This site was developed with:",
+
+        "$titleContact": "Do you want to contact me?",
+
+        "$proyects": "Proyects",
+
+        "$intered": "If you are interested in my work, do not hesitate to contact me at:",
+
+        "$footer": "Website created by © JosFe:"
+
+    },
+
+    "espanol": {
+
+        "$presentacion": "Buenos días 👋. Soy José Viveros, y aquí podrá observar algunas de mis habilidades y aptitudes como Desarrollador Junior.",
+
+        "$cargo": "Desarrollador Web Junior",
+
+        "$contactar": "Contactar",
+
+        "$objetivo": "Mi principal objetivo actualmente, es el de aplicar mis conocimientos tanto teóricos y prácticos aprendidos durante mi formación académi con el fin de beneficiar a la organización y a la vez desarrollarme de forma personal y profesional.",
+
+        "$descripcion": "Soy un joven de 19 años, apasionado por todo lo que tenga que ver con la tecnología, más especificamente con la programación, actualme curso la carrera de Ingenieria en Informática y aparte de eso me estoy formando de manera autodidacta ya que considero que la única manera de avanzar en esta vida es aprendiendo dia tras dia nue cosas.",
+
+        "$downloadCV": "Descargar CV",
+
+        "$selected": "Spanish",
+
+        "$quienSoy": "Quién soy?",
+
+        "$espanol": "Español",
+
+        "$ingles": "Inglés",
+
+        "$habilidades": "Habilidades Técnicas",
+
+        "$copy": "Estas son mis habiidades técnicas más importantes: ",
+
+        "$virtues": "Entre mis principales virtudes, considero mi positivismo ante la vida y mis  ganas de aprender más día a día, ya que estoy seguro que la unica manera de sobresalir en esta vida es aprendiendo nuevas cosas.",
+
+        "$hobbies": "Mi pasatiempo principal es el de programar, y desarrollar nuevos proyectos en dicho ámbito, ya que considero que me enriquezen como persona y a la vez me aportan nuevos conocimientos.",
+
+        "$certificates": "Certificados",
+
+        "$ver ": "Ver mas",
+
+        "$main": "¿Cuáles son mis principales virtudes?",
+
+        "$hobbies2": "¿Cuáles son mis principales pasatiempos?",
+
+        "$proyectosTra": "Proyectos",
+
+        "$html": "Poseo conocimientos de maquetación con el principal lenguaje de maquetación de la web.",
+        "$vuejs": "Poseo conocimientos del framework progresivo Vue js, las API`s tanto de composición (Composition API) y la de Opciones (Options API), y ademas poseo conocimientos acerca del manejo global del estado con VUEX.",
+
+        "$sitio": "Este sitio fue desarrollado con: ",
+
+        "$css": "Poseo conocimientos de los sistemas de flexbox y grid, además de animaciones con este lenguaje.",
+
+        "$office": "Tengo conocimetos de la suite de office, más específicamente de las herramientas de Power Point, Word y Excel.",
+
+        "$javascript": "Poseo conocimientos en este principal lenguaje de programación y desarrollo web.",
+
+        "$titleContact": "¿Quieres contactarme?",
+
+        "$intered": "Si estas interesado en mi trabajo no dudes en contactarme en:",
+
+        "$footer": "Sitio Web creado por &copy JosFe:"
+
+    }
+}

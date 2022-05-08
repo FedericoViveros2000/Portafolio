@@ -5,7 +5,7 @@
     "background_color": "#fff",
     "theme_color": "#0996FB",
     "orientation": "portrait",
-    "display": "standalone",
+    "display": "fullscreen",
     "start_url": "./?utm_source=web_app_manifest",
     "scope": "./",
     "lang": "es-PY",
