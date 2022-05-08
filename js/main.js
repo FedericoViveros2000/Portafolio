@@ -18,9 +18,7 @@ document.addEventListener('DOMContentLoaded', e => {
             const registration = navigator.serviceWorker.register('./serviceWorker.js')
             .then(reg => console.log(`Registro de SW exitoso ${reg}`))
             .catch(err => console.warn(`Error al tratar de registrar el SW: ${err}`))
-            if (registration.waiting) {
-                modalInstall.classList.add("hidden");
-            }
+           
         });
 
     }
