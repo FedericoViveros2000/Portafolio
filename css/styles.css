@@ -32,6 +32,61 @@
     text-align: center;
 }
 
+.modal__install {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.269);
+    position: fixed;
+    bottom: 5px;
+    z-index: 100;
+    transition: visibility .5s linear;
+    transition: opacity .5s linear;
+}
+
+.modal__install.hidden {
+    transition: visibility .5s linear;
+    transition: opacity .5s linear;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.install__dialog{
+    font-weight: bold;
+}
+
+.modal__install--container {
+    width: 100%;
+    border-radius: 7px;
+    line-height: 30px;
+    padding: 20px 15px;
+    position: absolute;
+    background-color: var(--color-title-dark);
+    bottom: 0;
+    text-align: center;
+}
+
+.btn__install{
+    display: block;
+    width: 100%;
+    border: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: var(--color-title-dark);
+    background-color: var(--color-btn);
+    padding: 10px;
+    
+}
+
+.btn__install:hover{
+    cursor: pointer;
+}
+
+.btn__omit{
+    background-color: var(--color-title-dark);
+    color: var(--color-title);
+    border-color: #A3ABBD;
+}
+
 /* 
     TODO Para el switch del traductor
 */

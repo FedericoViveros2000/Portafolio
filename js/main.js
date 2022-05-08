@@ -1,13 +1,47 @@
 import { mostrarScroll, mostrarScrollAbajo, mostrarScrollArriba, mostrarScrollDerecha, mostrarScrollIzquierda, mostrarScrollNormal, mostrarScrollNormal2 } from "./modules/animations.js";
 
-/* Validando que el navegador mediante el cual estamos accediendo sea compatible con los Service Workers para la PWA */
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./js/sw.js')
-    .then(reg => console.log(`Registro de SW exitoso ${reg}`))
-    .catch(err => console.warn(`Error al tratar de registrar el SW: ${err}`))
-}
+
 
 document.addEventListener('DOMContentLoaded', e => {
+
+    const modalInstall = document.querySelector('.modal__install');
+    const $btnInstall = document.getElementById('btn-install');     
+    const $btnNoInstall = document.getElementById('btn-omit');     
+
+    /* Validando que el navegador mediante el cual estamos accediendo sea compatible con los Service Workers para la PWA */
+   
+    let deferredPrompt;
+    if ('serviceWorker' in navigator) {
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            deferredPrompt = e;
+            const registration = navigator.serviceWorker.register('./serviceWorker.js')
+            .then(reg => console.log(`Registro de SW exitoso ${reg}`))
+            .catch(err => console.warn(`Error al tratar de registrar el SW: ${err}`))
+            if (registration.waiting) {
+                modalInstall.classList.add("hidden");
+            }
+        });
+
+    }
+
+    //Para en caso de que el usuario desee instalar la aplicacion
+    $btnInstall.addEventListener('click', async () => {
+            
+            if (deferredPrompt !== null) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                if (outcome === 'accepted') {
+                    deferredPrompt = null;
+                }
+            }
+            modalInstall.classList.add("hidden");
+      
+    });
+    
+    $btnNoInstall.addEventListener('click', e => {
+        modalInstall.classList.add("hidden");
+    })
 
     const btnSwitch = document.querySelector('#switch');
 
