@@ -4,45 +4,42 @@ import { mostrarScroll, mostrarScrollAbajo, mostrarScrollArriba, mostrarScrollDe
 
 document.addEventListener('DOMContentLoaded', e => {
 
-    // const modalInstall = document.querySelector('.modal__install');
-    // const $btnInstall = document.getElementById('btn-install');     
-    // const $btnNoInstall = document.getElementById('btn-omit');     
+    //const modalInstall = document.querySelector('.modal__install');
+   // const $btnInstall = document.getElementById('btn-install');     
+   // const $btnNoInstall = document.getElementById('btn-omit');     
 
     /* Validando que el navegador mediante el cual estamos accediendo sea compatible con los Service Workers para la PWA */
    
     let deferredPrompt;
     if ('serviceWorker' in navigator) {
 
-        navigator.serviceWorker.register('./serviceWorker.js')
+        //window.addEventListener('beforeinstallprompt', (e) => {
+            //deferredPrompt = e;
+             navigator.serviceWorker.register('./serviceWorker.js')
             .then(reg => console.log(`Registro de SW exitoso ${reg}`))
             .catch(err => console.warn(`Error al tratar de registrar el SW: ${err}`))
-        // window.addEventListener('beforeinstallprompt', (e) => {
-        //     deferredPrompt = e;
-        //     const registration = 
-        //     if (registration.waiting) {
-        //         modalInstall.classList.add("hidden");
-        //     }
-        // });
+           
+        //});
 
     }
 
-    // //Para en caso de que el usuario desee instalar la aplicacion
-    // $btnInstall.addEventListener('click', async () => {
+    //Para en caso de que el usuario desee instalar la aplicacion
+    /*$btnInstall.addEventListener('click', async () => {
             
-    //         if (deferredPrompt !== null) {
-    //             deferredPrompt.prompt();
-    //             const { outcome } = await deferredPrompt.userChoice;
-    //             if (outcome === 'accepted') {
-    //                 deferredPrompt = null;
-    //             }
-    //         }
-    //         modalInstall.classList.add("hidden");
+             if (deferredPrompt !== null) {
+                 deferredPrompt.prompt();
+                 const { outcome } = await deferredPrompt.userChoice;
+                 if (outcome === 'accepted') {
+                     deferredPrompt = null;
+                 }
+             }
+             modalInstall.classList.add("hidden");
       
-    // });
+     });
     
-    // $btnNoInstall.addEventListener('click', e => {
-    //     modalInstall.classList.add("hidden");
-    // })
+    $btnNoInstall.addEventListener('click', e => {
+        modalInstall.classList.add("hidden");
+    })*/
 
     const btnSwitch = document.querySelector('#switch');
 
