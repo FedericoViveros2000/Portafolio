@@ -51,6 +51,7 @@ const urlsToCache = [
     './img/Icons/icons-32x32.png'
 ]
 
+//TODO Instalando los recursos para obtener la PWA con el SW.
 self.addEventListener('install', (e) => {
   try {
     e.waitUntil((async () => {
@@ -62,27 +63,32 @@ self.addEventListener('install', (e) => {
   }
   });
 
-self.addEventListener('fetch', (e) => {
-    try {
-        e.respondWith((async () => {
-            const response = await caches.match(e.request);
-    
-            console.log(`Obteniendo los recursos de: ${e.request.url}`);
-    
-            if (response)  return response;
-    
-            const reponseTwo = await fetch(e.request);
-            const cache = await caches.open(cacheName);
-            console.log(`Cacheando los nuevos recursos: ${e.request.url}`);
-            cache.put(e.request, responseTwo.clone());
-            return responseTwo;
-        })());
-    } catch (error) {
-        console.log(`Ha Ocurrido un error al hacer fetch ${error}`);
+  //Todo Metodo para recuperar los recursos guardados en la instalacion del SW.
+  const putInCache = async (request, response) => {
+    const cache = await caches.open(cacheName);
+    await cache.put(request, response);
+  }
+  
+  const cacheFirst = async (request) => {
+    const responseFromCache = await caches.match(request);
+    if (responseFromCache) {
+      return responseFromCache;
     }
-})
+    const responseFromNetwork = await fetch(request);
+    putInCache(request, responseFromNetwork.clone())
+    return responseFromNetwork;
+  };
+  
+  self.addEventListener('fetch', (event) => {
+    try {
+      
+      event.respondWith(cacheFirst(event.request));
+    } catch (error) {
+      console.log(`Error al hacer el fetch ${error}`);
+    }
+  });
 
-
+//Todo Cacheando los recursos si es que existe alguna modificacion.
 self.addEventListener('activate', (e) => {
     try {
         e.waitUntil(caches.keys().then((keyList) => {

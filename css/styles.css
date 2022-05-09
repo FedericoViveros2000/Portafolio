@@ -32,37 +32,41 @@
     text-align: center;
 }
 
-.modal__install {
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.269);
-    position: fixed;
-    bottom: 5px;
-    z-index: 100;
-    transition: visibility .5s linear;
-    transition: opacity .5s linear;
-}
-
-.modal__install.hidden {
-    transition: visibility .5s linear;
-    transition: opacity .5s linear;
-    visibility: hidden;
-    opacity: 0;
-}
-
 .install__dialog{
     font-weight: bold;
 }
 
 .modal__install--container {
     width: 100%;
-    border-radius: 7px;
+    border-radius: 10px;
     line-height: 30px;
     padding: 20px 15px;
-    position: absolute;
-    background-color: var(--color-title-dark);
+    position: fixed;
     bottom: 0;
+    z-index: 900;
+    background-color: var(--color-title-dark);
     text-align: center;
+    transition:  transform .5s linear;
+    transform: translateY(100%);
+}
+
+.modal__install--container.show{
+    transition:  transform .5s linear;
+    transform: translateY(0);
+}
+
+body.dark .modal__install--container{
+    color: var(--color-title-dark);
+    background-color: var(--color-title);
+}
+
+body.dark .btn__install{
+    background-color: var(--color-btn);
+    color: var(--color-text-dark);
+}
+body.dark .btn__omit{
+    background-color: var(--color-title);
+    color: var(--color-text-dark);
 }
 
 .btn__install{
@@ -74,7 +78,6 @@
     color: var(--color-title-dark);
     background-color: var(--color-btn);
     padding: 10px;
-    
 }
 
 .btn__install:hover{
@@ -99,8 +102,6 @@ body {
     box-sizing: border-box;
 }
 
-
-
 a {
     text-decoration: none;
 }
@@ -112,7 +113,6 @@ a {
     display: flex;
     justify-content: space-between;
 }
-
 
 .lang-menu {
     width: 100px;
@@ -126,7 +126,6 @@ body.dark .lang-menu {
     color: var(--color-title-dark);
 
 }
-
 .lang-menu .selected-lang {
     display: flex;
     justify-content: space-between;

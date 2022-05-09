@@ -1,45 +1,53 @@
-import { mostrarScroll, mostrarScrollAbajo, mostrarScrollArriba, mostrarScrollDerecha, mostrarScrollIzquierda, mostrarScrollNormal, mostrarScrollNormal2 } from "./modules/animations.js";
+import {
+    mostrarScroll,
+    mostrarScrollAbajo,
+    mostrarScrollArriba,
+    mostrarScrollDerecha,
+    mostrarScrollIzquierda,
+    mostrarScrollNormal,
+    mostrarScrollNormal2
+} from "./modules/animations.js";
 
 
 
 document.addEventListener('DOMContentLoaded', e => {
-
-    //const modalInstall = document.querySelector('.modal__install');
-   // const $btnInstall = document.getElementById('btn-install');     
-   // const $btnNoInstall = document.getElementById('btn-omit');     
+    const $modalInstallContainer =  document.querySelector('.modal__install--container');
+    const $btnInstall = document.getElementById('btn-install');     
+    const $btnNoInstall = document.getElementById('btn-omit');     
 
     /* Validando que el navegador mediante el cual estamos accediendo sea compatible con los Service Workers para la PWA */
-   
-    let deferredPrompt;
     if ('serviceWorker' in navigator) {
-
-        //window.addEventListener('beforeinstallprompt', (e) => {
-            //deferredPrompt = e;
-             navigator.serviceWorker.register('./serviceWorker.js')
-            .then(reg => console.log(`Registro de SW exitoso ${reg}`))
-            .catch(err => console.warn(`Error al tratar de registrar el SW: ${err}`))
-           
-        //});
-
+        navigator.serviceWorker.register('./serviceWorker.js')
+        .then(reg => console.log(`Registro de SW exitoso ${reg}`))
+        .catch(err => console.warn(`Error al tratar de registrar el SW: ${err}`))
     }
-
-    //Para en caso de que el usuario desee instalar la aplicacion
-    /*$btnInstall.addEventListener('click', async () => {
-            
-             if (deferredPrompt !== null) {
-                 deferredPrompt.prompt();
-                 const { outcome } = await deferredPrompt.userChoice;
-                 if (outcome === 'accepted') {
-                     deferredPrompt = null;
-                 }
-             }
-             modalInstall.classList.add("hidden");
-      
-     });
     
-    $btnNoInstall.addEventListener('click', e => {
-        modalInstall.classList.add("hidden");
-    })*/
+    let deferredPrompt;
+    //Escuchando el evento para saber si la aplicacion esta o no instalada.
+    window.addEventListener('beforeinstallprompt', (e) => {
+
+        deferredPrompt = e;
+        $modalInstallContainer.classList.add("show");
+        //Para en caso de que el usuario desee instalar la aplicacion
+        $btnInstall.addEventListener('click', async () => {
+                
+            if (deferredPrompt !== null) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                if (outcome === 'accepted') {
+                    deferredPrompt = null;
+                    $modalInstallContainer.classList.remove("show")
+                }
+            }
+          
+        });
+        
+        //En caso de que el usuario no desee instalar la aplicacion se ocultara el popup
+        $btnNoInstall.addEventListener('click', e => {
+            $modalInstallContainer.classList.remove("show")
+        })
+
+    })
 
     const btnSwitch = document.querySelector('#switch');
 
@@ -66,23 +74,11 @@ document.addEventListener('DOMContentLoaded', e => {
 
     //TODO Escuchando los eventos del Scroll para ejecutar las animaciones
     window.addEventListener('scroll', mostrarScroll);
-
-
     window.addEventListener('scroll', mostrarScrollDerecha);
-  
-  
     window.addEventListener('scroll', mostrarScrollArriba);
-  
-  
     window.addEventListener('scroll', mostrarScrollAbajo);
-  
-  
     window.addEventListener('scroll', mostrarScrollIzquierda);
-  
-  
     window.addEventListener('scroll', mostrarScrollNormal);
-  
-  
     window.addEventListener('scroll', mostrarScrollNormal2);
 
     /* 
@@ -213,7 +209,7 @@ document.addEventListener('DOMContentLoaded', e => {
     const $vuejs = document.getElementById('vuejs');
 
     const ver = document.getElementById('lang');
-    
+
 
     $btnEnglish.addEventListener('click', e => {
 
@@ -221,8 +217,8 @@ document.addEventListener('DOMContentLoaded', e => {
 
             ver.setAttribute('lang', 'en');
 
-/*             console.log(ver.getAttribute('lang'));
- */
+            /*             console.log(ver.getAttribute('lang'));
+             */
             $langMenu.classList.add('active');
 
 
@@ -232,10 +228,10 @@ document.addEventListener('DOMContentLoaded', e => {
 
             ver.setAttribute('lang', 'es');
 
-/*             console.log($langMenu);
- */
-/*             console.log(ver.getAttribute('lang'));
- */
+            /*             console.log($langMenu);
+             */
+            /*             console.log(ver.getAttribute('lang'));
+             */
             $langMenu.classList.remove('active');
 
 
@@ -250,103 +246,103 @@ document.addEventListener('DOMContentLoaded', e => {
     function traducirInglesFunc() {
 
         fetch('./js/modules/lang.json')
-        .then(res => res.json())
-        .then(res => {
-            console.log(res)
-            if (ver.getAttribute('lang') === 'en') {
-    
-                $content.textContent = res.english.$presentacion;
-                $acerca.textContent = res.english.$objetivo;
-                $instructor.textContent = res.english.$cargo;
-                $about.textContent = res.english.$descripcion;
-                $contactos.textContent = res.english.$contactar;
-    
-                $cta.forEach(ct => {
-    
-                    ct.textContent = res.english.$contactar;
-    
-                });
-    
-                $ver.forEach(mas =>{
-                    mas.textContent = res.english.$see;
-                })
-    
-                $develop.forEach(develop =>{
-                    develop.textContent = res.english.$site;
-                })
-    
-                $btnEnglish.textContent = res.english.$selected;
-                $lang.textContent = res.english.$ingle;
-                $hardSkills.textContent = res.english.$habilidades;
-                $copy.textContent = res.english.$copy;
-                $ctaDownload.textContent = res.english.$downloadCV;
-                $virtudes.textContent = res.english.$virtues;
-                $soy.textContent = res.english.$Iam;
-                $pasatiempos.textContent = res.english.$hobbies;
-                $certificados.textContent = res.english.$certificates;
-                $principal.textContent = res.english.$main;
-                $pasatiempos2.textContent = res.english.$hobbies2;
-                $html.textContent = res.english.$html;
-                $vuejs.textContent = res.english.$vuejs;
-                $css.textContent = res.english.$css;
-                $proyectos.textContent = res.english.$proyects;
-                $javascript.textContent = res.english.$javascript;
-                $office.textContent = res.english.$office;
-                $footer.textContent = res.english.$footer;
-                $contact.textContent = res.english.$titleContact;
-                $footerCopy.textContent = res.english.$intered;
-    
-            } else if (ver.getAttribute('lang') === 'es') {
-    
-    
-                $content.textContent = res.espanol.$presentacion;
-                $acerca.textContent = res.espanol.$descripcion;
-                $contactos.textContent = res.espanol.$contactar;
-                $about.textContent = res.espanol.$descripcion;
-                $lang.classList.remove('active');
-                $vuejs.textContent = res.espanol.$vuejs;
-                $lang.textContent = res.espanol.$espanol;
-                $btnEnglish.textContent = res.espanol.$ingles;
-                $copy.textContent = res.espanol.$copy;
-                $proyectos.textContent = res.espanol.$proyectosTra;
-                
-    
-                $cta.forEach(ct => {
-    
-                    ct.textContent = res.espanol.$contactar;
-    
-                });
-    
-                $ver.forEach(mas =>{
-                    mas.textContent = res.espanol.$ver;
-                })
-    
-                $develop.forEach(develop =>{
-                    develop.textContent = res.espanol.$sitio;
-                })
-    
-                $ctaDownload.textContent = res.espanol.$downloadCV;
-    
-                $hardSkills.textContent = res.espanol.$habilidades;
-    
-                $virtudes.textContent = res.espanol.$virtues;
-                $pasatiempos.textContent = res.espanol.$hobbies;
-                $certificados.textContent = res.espanol.$certificates;
-                $principal.textContent = res.espanol.$main;
-                $pasatiempos2.textContent = res.espanol.$hobbies2;
-                $html.textContent = res.espanol.$html;
-                $css.textContent = res.espanol.$css;
-                $javascript.textContent = res.espanol.$javascript;
-                $soy.textContent = res.espanol.$quienSoy;
-                $office.textContent = res.espanol.$office;
-                $footer.textContent = res.espanol.$footer;
-                $contact.textContent = res.espanol.$titleContact;
-                $footerCopy.textContent = res.espanol.$intered;
-    
-    
-            }
-        })
-        .catch(err => console.log(`Ha ocurrido un error al intentar traducir la pagina ${err} `))
+            .then(res => res.json())
+            .then(res => {
+                console.log(res)
+                if (ver.getAttribute('lang') === 'en') {
+
+                    $content.textContent = res.english.$presentacion;
+                    $acerca.textContent = res.english.$objetivo;
+                    $instructor.textContent = res.english.$cargo;
+                    $about.textContent = res.english.$descripcion;
+                    $contactos.textContent = res.english.$contactar;
+
+                    $cta.forEach(ct => {
+
+                        ct.textContent = res.english.$contactar;
+
+                    });
+
+                    $ver.forEach(mas => {
+                        mas.textContent = res.english.$see;
+                    })
+
+                    $develop.forEach(develop => {
+                        develop.textContent = res.english.$site;
+                    })
+
+                    $btnEnglish.textContent = res.english.$selected;
+                    $lang.textContent = res.english.$ingle;
+                    $hardSkills.textContent = res.english.$habilidades;
+                    $copy.textContent = res.english.$copy;
+                    $ctaDownload.textContent = res.english.$downloadCV;
+                    $virtudes.textContent = res.english.$virtues;
+                    $soy.textContent = res.english.$Iam;
+                    $pasatiempos.textContent = res.english.$hobbies;
+                    $certificados.textContent = res.english.$certificates;
+                    $principal.textContent = res.english.$main;
+                    $pasatiempos2.textContent = res.english.$hobbies2;
+                    $html.textContent = res.english.$html;
+                    $vuejs.textContent = res.english.$vuejs;
+                    $css.textContent = res.english.$css;
+                    $proyectos.textContent = res.english.$proyects;
+                    $javascript.textContent = res.english.$javascript;
+                    $office.textContent = res.english.$office;
+                    $footer.textContent = res.english.$footer;
+                    $contact.textContent = res.english.$titleContact;
+                    $footerCopy.textContent = res.english.$intered;
+
+                } else if (ver.getAttribute('lang') === 'es') {
+
+
+                    $content.textContent = res.espanol.$presentacion;
+                    $acerca.textContent = res.espanol.$descripcion;
+                    $contactos.textContent = res.espanol.$contactar;
+                    $about.textContent = res.espanol.$descripcion;
+                    $lang.classList.remove('active');
+                    $vuejs.textContent = res.espanol.$vuejs;
+                    $lang.textContent = res.espanol.$espanol;
+                    $btnEnglish.textContent = res.espanol.$ingles;
+                    $copy.textContent = res.espanol.$copy;
+                    $proyectos.textContent = res.espanol.$proyectosTra;
+
+
+                    $cta.forEach(ct => {
+
+                        ct.textContent = res.espanol.$contactar;
+
+                    });
+
+                    $ver.forEach(mas => {
+                        mas.textContent = res.espanol.$ver;
+                    })
+
+                    $develop.forEach(develop => {
+                        develop.textContent = res.espanol.$sitio;
+                    })
+
+                    $ctaDownload.textContent = res.espanol.$downloadCV;
+
+                    $hardSkills.textContent = res.espanol.$habilidades;
+
+                    $virtudes.textContent = res.espanol.$virtues;
+                    $pasatiempos.textContent = res.espanol.$hobbies;
+                    $certificados.textContent = res.espanol.$certificates;
+                    $principal.textContent = res.espanol.$main;
+                    $pasatiempos2.textContent = res.espanol.$hobbies2;
+                    $html.textContent = res.espanol.$html;
+                    $css.textContent = res.espanol.$css;
+                    $javascript.textContent = res.espanol.$javascript;
+                    $soy.textContent = res.espanol.$quienSoy;
+                    $office.textContent = res.espanol.$office;
+                    $footer.textContent = res.espanol.$footer;
+                    $contact.textContent = res.espanol.$titleContact;
+                    $footerCopy.textContent = res.espanol.$intered;
+
+
+                }
+            })
+            .catch(err => console.log(`Ha ocurrido un error al intentar traducir la pagina ${err} `))
 
 
     }
