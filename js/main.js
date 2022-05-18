@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', e => {
                     $footer.textContent = res.espanol.$footer;
                     $contact.textContent = res.espanol.$titleContact;
                     $footerCopy.textContent = res.espanol.$intered;
-
+                    
                 }
             })
             .catch(err => console.log(`Ha ocurrido un error al intentar traducir la pagina ${err} `))
