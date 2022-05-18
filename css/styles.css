@@ -222,19 +222,9 @@ body.dark .lang-menu ul li:hover {
     background-repeat: no-repeat;
 }
 
-
-.lang-menu.active .en:before {
-    background-image: url(https://www.countryflags.io/es/flat/32.png);
-}
-
-.en:before {
-    background-image: url(https://www.countryflags.io/us/flat/32.png);
-}
-
 body.dark .en:hover {
     color: var(--color-title);
 }
-
 
 .lang-menu:hover ul {
     display: block;
@@ -243,7 +233,6 @@ body.dark .en:hover {
 /* 
 TODO Para el modo oscuro 
 */
-
 
 /* Boton */
 
@@ -307,18 +296,10 @@ TODO Para el modo oscuro
 
 }
 
-
-
-
-
 body {
     font-family: 'Inter', sans-serif;
     transition: 1s ease all;
-
-
 }
-
-
 
 .container {
     width: var(--width-container);
@@ -360,29 +341,22 @@ body.dark .hero {
 body.dark .hero::after {
     content: "";
     background-color: #3E6191;
-
-
 }
 
 .hero__container {
-
     display: grid;
     height: 100%;
     grid-template-columns: 3fr 2fr;
     place-items: center;
     gap: 20px;
-
-
 }
 
 .hero__title {
     font-size: 4rem;
     transition: color 1s;
-
 }
 
 body.dark .hero__title {
-
     color: var(--color-text-dark);
 }
 
@@ -419,17 +393,14 @@ body.dark .hero__copy {
     width: 95%;
 }
 
-
 .main {
     background-color: #fff;
     transition: background-color 1s;
-
 }
 
 body.dark .main {
     background-color: #3E6191;
 }
-
 
 .title {
     font-size: 2.5rem;
@@ -437,7 +408,6 @@ body.dark .main {
     color: var(--color-title);
     text-align: center;
     transition: color 1s;
-
 }
 
 .title--border::after {

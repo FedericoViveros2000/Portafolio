@@ -1,32 +1,24 @@
 {
     "english": {
 
+        "installTitle" : "Do you want to install the application?",
+        "textInstall" : "There is an application available for this site.",
+        "btnInstall": "Install",
+        "omit": "Skip",
+
         "$presentacion": "Good morning 👋. I am José Viveros, and here you can see some of my skills and abilities as a Junior Developer.",
-
         "$cargo": "Web Developer Junior",
-
         "$downloadCV": "Download CV",
-
         "$objetivo": "My main objective today is to apply my theoretical and practical knowledge learned during my academic training, in order to benefit the organization and at the same time develop myself personally and professionally.",
-
         "$descripcion": "I am an 19 year old young man, passionate about everything that has to do with technology, more specifically with programming, I am currently studying Computer Engineering and apart from that I am training in a self-taught way since I consider that the only way To advance in this life is to learn new things day after day.",
-
         "$contactar": "Contact",
-
         "$selected": "Spanish",
-
         "$ingle": "English",
-
         "$habilidades": "Technical skills",
-
         "$copy": "These are my most important technical skills:",
-
         "$virtues": "Among my main virtues, I consider my positivism towards life and my desire to learn more day by day, since I am sure that the only way to excel in this life it is learning new things.",
-
         "$hobbies": "My main hobby is programming, and developing new projects in this area, since I consider that they enrich me as a person and at the same time bring me new knowledge.",
-
         "$certificates": "Certificates",
-
         "$Iam": "Who I am",
 
         "$main": "What are my main virtues?",
@@ -58,6 +50,11 @@
     },
 
     "espanol": {
+
+        "installTitle" : "¿Desea Instalar la Aplicación?",
+        "textInstall" : "Existe una aplicación disponible para este sitio.",
+        "btnInstall": "Instalar",
+        "omit": "Omitir",
 
         "$presentacion": "Buenos días 👋. Soy José Viveros, y aquí podrá observar algunas de mis habilidades y aptitudes como Desarrollador Junior.",
 
