@@ -9,6 +9,7 @@
 /* 
     TODO Asi se declaran variables globales para el documento
 */
+
 :root {
     --color-primary: #00B8FF;
     --color-title: #3F4756;
@@ -253,8 +254,6 @@ TODO Para el modo oscuro
     cursor: pointer;
     display: flex;
     outline: none;
-    transition: ease all .5s;
-
 }
 
 .switch>span {
@@ -287,7 +286,7 @@ TODO Para el modo oscuro
 .switch.active {
     background-color: orange;
     color: #000;
-    transition: .5s ease all;
+    transition: right .5s linear;
 }
 
 .switch.active::after {
@@ -377,12 +376,22 @@ body.dark .hero__title {
     transform: scale(1.05);
 }
 
+.hero__cta--repo{
+    text-decoration: none;
+    color:var(--color-text-dark);
+    border-radius: 10px;
+    transition: background-color  0.s linear;
+}
+
+.hero__cta--repo:hover{
+    background-color: var(--color-title);
+}
+
 .hero__copy {
     font-size: 1.2rem;
     margin: 25px 15px;
     transition: color 1s;
     line-height: 40px;
-
 }
 
 body.dark .hero__copy {
@@ -456,22 +465,20 @@ body.dark .cta__contact {
 
 .container__proyects {
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
 .container__proyects--card:nth-child(1) {
-    background-image: url(../img/sitio_1.PNG);
+    background-image: url(../img/sitio_1.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
-
 }
 
 .container__proyects--card:nth-child(2) {
-    background-image: url(../img/sitio_2.PNG);
+    background-image: url(../img/sitio_2.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -479,16 +486,16 @@ body.dark .cta__contact {
 }
 
 .container__proyects--card:nth-child(3) {
-    background-image: url(../img/country_app.JPG);
+    background-image: url(../img/country_app.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
 }
 
 
 .container__proyects--card {
     width: 25%;
-    height: 70%;
+    height: 60vh;
     background-color: skyblue;
     border-radius: 5px;
     position: relative;
@@ -502,7 +509,7 @@ body.dark .container__proyects--card:hover>.container__proyects--hover {
 }
 
 .container__proyects--title {
-    margin-top: 100px;
+    margin: 50px 0px;
 }
 
 .container__proyects--hover {
@@ -948,7 +955,6 @@ body.dark .footer__copyright {
 
     :root {
         --height-shape: 14em;
-
     }
 
     .hero {
@@ -966,17 +972,11 @@ body.dark .footer__copyright {
 
     .container__proyects--hover {
         padding: 50px;
-
-    }
-
-    .hero__cta {
-        padding: 20px 0;
     }
 
     .container__proyects--btn {
         display: block;
-        box-shadow: #fff 2px 2px 7px;
-        font-size: 1.125rem;
+        font-size: 16px;
         padding: 5px 10px;
     }
 
@@ -989,8 +989,6 @@ body.dark .footer__copyright {
     .hero__texts {
         z-index: 30;
     }
-
-
 
     .hero__container {
         --padding-container: 60px 0;
@@ -1113,7 +1111,7 @@ body.dark .footer__copyright {
     text-align: center;
     font-size: 2.5rem;
     color: var(--color-title);
-    margin-bottom: 50px;
+    margin: 50px 0;
     transition: color 1s linear;
 }
 
@@ -1159,9 +1157,19 @@ body.dark .container__slider--title {
 }
 
 .slider__btn:hover {
-
     background-color: rgba(0, 0, 0, 0.377);
+}
 
+.container__slider--certificaciones {
+    width: 90%;
+    height: 65%;
+}
+
+.slider__img {
+    height: 100%;
+}
+.slider__certificaciones{
+    height: 60vh;
 }
 
 .slider__btn--left {
@@ -1173,34 +1181,6 @@ body.dark .container__slider--title {
 }
 
 
-
-@media screen and (max-width:1300px) {
-    .container__slider--certificaciones {
-        width: 80%;
-        height: 45%;
-    }
-
-    .slider__img {
-        height: 100%;
-    }
-}
-
-@media screen and (max-width:768px) {
-    .container__slider--certificaciones {
-        width: 90%;
-        height: 65%;
-    }
-
-    .slider__img {
-        height: 100%;
-    }
-    .slider__certificaciones{
-        height: auto;
-    }
-}
-
-
-
 /* Para moviles mas pequenhos */
 
 @media screen and (max-width:500px) {
@@ -1209,15 +1189,10 @@ body.dark .container__slider--title {
         --padding-btn: 20px 0;
     }
 
-    .container__slider--certificaciones {
-        width: 90%;
-        height: 45%;
+    .modo__oscuro {
+        width: 100%;
+        padding: 0 30px;
     }
-
-    .slider__img {
-        height: 100%;
-    }
-
 
 
     .hero__container {
@@ -1233,20 +1208,15 @@ body.dark .container__slider--title {
         font-size: 3rem;
     }
 
-    .hero__cta {
+    .hero__cta, .hero__cta--repo {
         display: block;
         width: 90%;
         margin: 0 auto;
-        padding: 10px 0;
+        padding: 12px 0;
     }
 
     .title {
         font-size: 2rem;
-    }
-
-    .cta {
-        display: block;
-
     }
 
     .instructor {
@@ -1257,8 +1227,11 @@ body.dark .container__slider--title {
         width: 90%;
     }
 
-    .about {
+    .slider__certificaciones {
+        height: 40vh;
+    }
 
+    .about {
         gap: 40px;
     }
 
@@ -1309,7 +1282,6 @@ body.dark .container__slider--title {
 /* Para las animaciones con el scroll */
 
 /* Course */
-
 
 /* 
     TODO Aqui se modifica de hacia donde se quiere que venga el elemento

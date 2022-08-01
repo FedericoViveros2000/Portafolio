@@ -62,10 +62,9 @@ document.addEventListener('DOMContentLoaded', e => {
     btnSwitch.addEventListener('click', () => {
         document.body.classList.toggle('dark');
         btnSwitch.classList.toggle('active');
+
         /* 
             TODO Para que el modo nocturno quede guardado (no se borre al actualizar el sitio, LOCALSTORAGE)
-        */
-        /* 
             !Guardando el modo nocturno en LOCALSTORAGE
         */
         if (document.body.classList.contains('dark')) {
@@ -182,7 +181,6 @@ document.addEventListener('DOMContentLoaded', e => {
     
     const ver = document.getElementById('lang');
 
-
     $btnEnglish.addEventListener('click', e => {
 
         if ($langMenu.classList.contains('active') == false) {
@@ -292,7 +290,7 @@ document.addEventListener('DOMContentLoaded', e => {
                     
                 }
             })
-            .catch(err => console.log(`Ha ocurrido un error al intentar traducir la pagina ${err} `))
+            .catch(err => console.log(`Ha ocurrido un error al intentar traducir la pagina ${err}`))
     }
 
 
