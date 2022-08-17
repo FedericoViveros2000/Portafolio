@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', e => {
     /* Validando que el navegador mediante el cual estamos accediendo sea compatible con los Service Workers para la PWA */
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('./serviceWorker.js')
-        .then(reg => console.log(`Registro de SW exitoso ${reg}`))
+        .then(reg => reg)
         .catch(err => console.warn(`Error al tratar de registrar el SW: ${err}`))
     }
 

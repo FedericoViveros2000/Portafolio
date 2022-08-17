@@ -22,7 +22,7 @@ const urlsToCache = [
     './img/bxl-whatsapp.svg',
     './img/bxs-moon.svg',
     './img/bxs-sun.svg',
-    './img/country_app.JPG',
+    './img/country_app.png',
     './img/css-3.svg',
     './img/Curriculum_Jose_Viveros.pdf',
     './img/espana.png',
@@ -30,14 +30,14 @@ const urlsToCache = [
     './img/foto_carnet.jpg',
     './img/html-5.svg',
     './img/informatica.jpg',
-    './img/ingles_tecnico.PNG',
+    './img/ingles_tecnico.png',
     './img/javascript.svg',
     './img/message.svg',
     './img/sass.svg',
-    './img/sitio_1.PNG',
-    './img/sitio_2.PNG',
-    './img/Vue js.JPG',
-    './img/vue_course.JPG',
+    './img/sitio_1.png',
+    './img/sitio_2.png',
+    './img/vuex.png',
+    './img/vue_course.jpg',
     './img/vue.svg',
     './img/work1.jpg',
     './img/work2.jpg',
@@ -56,7 +56,7 @@ self.addEventListener('install', (e) => {
   try {
     e.waitUntil((async () => {
       const cache = await caches.open(cacheName);
-      await cache.addAll(urlsToCache);
+      return await cache.addAll(urlsToCache);
     })());
   } catch (error) {
     console.warn(`Ha ocurrido un error al intentar instalar el SW ${error}`);
@@ -81,7 +81,6 @@ self.addEventListener('install', (e) => {
   
   self.addEventListener('fetch', (event) => {
     try {
-      
       event.respondWith(cacheFirst(event.request));
     } catch (error) {
       console.log(`Error al hacer el fetch ${error}`);
