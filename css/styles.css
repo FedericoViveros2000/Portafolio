@@ -470,11 +470,20 @@ body.dark .cta__contact {
     justify-content: space-evenly;
 }
 
+.container__proyects--develop{
+    color: white;
+    font-weight: bold;
+}
+
 .container__proyects--card:nth-child(1) {
-    background-image: url(../img/sitio_1.png);
+    background-image: url(../img/instagram.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+}
+
+body.dark .container__proyects--card:nth-child(1){
+    background-image: url(../img/instagram_dark.jpeg);
 }
 
 .container__proyects--card:nth-child(2) {
@@ -482,7 +491,6 @@ body.dark .cta__contact {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
-
 }
 
 .container__proyects--card:nth-child(3) {
@@ -492,6 +500,9 @@ body.dark .cta__contact {
     background-position: top;
 }
 
+body.dark .container__proyects--card:nth-child(3){
+    background-image: url(../img/country_app_dark.png);
+}
 
 .container__proyects--card {
     width: 25%;
@@ -971,7 +982,7 @@ body.dark .footer__copyright {
     }
 
     .container__proyects--hover {
-        padding: 50px;
+        padding: 15px;
     }
 
     .container__proyects--btn {
