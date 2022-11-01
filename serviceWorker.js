@@ -2,9 +2,7 @@
 
 const cacheName = "v1_portfolio_jose_viveros";
 const urlsToCache = [
-    './',
-    'https://kit.fontawesome.com/552b72054f.js',
-    'https://vite-plugin-pwa.netlify.app/icon_dark.svg',
+    '/',
     './css/normalize.css',
     './css/styles.css',
     './img/Icons/icons-32x32.png',
@@ -33,8 +31,8 @@ const urlsToCache = [
     './img/bxl-whatsapp.svg',
     './img/bxs-moon.svg',
     './img/bxs-sun.svg',
-    './img/country_app.png',
     './img/country_app_dark.png',
+    './img/country_app.png',
     './img/css-3.svg',
     './img/Curriculum_Jose_Viveros.pdf',
     './img/espana.png',
@@ -50,8 +48,8 @@ const urlsToCache = [
     './img/message.svg',
     './img/sass.svg',
     './img/sitio_2.png',
-    './img/vue_course.jpg',
     './img/tailwindcss-icon.svg',
+    './img/vue_course.jpg',
     './img/vitejs.svg',
     './img/vue.svg',
     './img/vuex.png',
