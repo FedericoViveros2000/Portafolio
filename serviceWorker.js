@@ -2,7 +2,7 @@
 
 const cacheName = "v1_portfolio_jose_viveros";
 const urlsToCache = [
-    '/',
+    './',
     './css/normalize.css',
     './css/styles.css',
     './img/Icons/icons-32x32.png',
