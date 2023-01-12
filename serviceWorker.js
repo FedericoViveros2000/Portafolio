@@ -48,6 +48,7 @@ const urlsToCache = [
     './img/message.svg',
     './img/sass.svg',
     './img/sitio_2.png',
+    './img/git_course.png',
     './img/tailwindcss-icon.svg',
     './img/vue_course.jpg',
     './img/vitejs.svg',

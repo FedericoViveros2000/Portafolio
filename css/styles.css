@@ -1115,7 +1115,6 @@ body.dark .footer__copyright {
     position: relative;
     border-radius: 3px;
     box-shadow: 1px 3px 10px rgba(65, 64, 64, 0.411);
-
 }
 
 .container__slider--title {
@@ -1149,8 +1148,6 @@ body.dark .container__slider--title {
     max-width: 100%;
     object-fit: cover;
 }
-
-
 
 .slider__btn {
     position: absolute;
